@@ -2,25 +2,33 @@
 <html lang="fr" data-lang="fr"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FFFFFF">
 <title>Mohammed Serrou — Contrôle de gestion, BI, formations et mentorat</title>
 <meta name="description" content="Contrôle de gestion pour PME, business intelligence, formations et mentorat. Des chiffres clairs pour piloter et décider.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mohammed Serrou — Contrôle de gestion, BI, formations et mentorat">
+<meta property="og:description" content="Contrôle de gestion pour PME, business intelligence, formations et mentorat. Des chiffres clairs pour piloter et décider.">
+<meta property="og:url" content="https://me-ecru-five.vercel.app/index.html">
+<meta property="og:image" content="https://me-ecru-five.vercel.app/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#FFFFFF; --wash:#F4F6FA; --ink:#0F1E3D; --ink-2:#4A5670; --line:#E2E6EE; --steel:#3D5A99; --on-ink:#FFFFFF;
+  --bg:#FFFFFF; --wash:#FAF5F6; --ink:#211A1D; --ink-2:#5E5459; --line:#EDE3E6; --steel:#7A1F3D; --accent:#7A1F3D; --accent-d:#5C1630; --on-ink:#FFFFFF;
   --serif:"Newsreader", Georgia, "Times New Roman", serif;
   --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#0B1730;--wash:#11203F;--ink:#E9EDF5;--ink-2:#A7B1C6;--line:#22335A;--steel:#8FA8DC;--on-ink:#0B1730;}
-}
-:root[data-theme="dark"]{--bg:#0B1730;--wash:#11203F;--ink:#E9EDF5;--ink-2:#A7B1C6;--line:#22335A;--steel:#8FA8DC;--on-ink:#0B1730;}
+
+
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -210,12 +218,65 @@ nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-under
   nav a{font-size:12.5px}
   body{padding-bottom:56px}}
 @media (max-width:700px){.formats{grid-template-columns:1fr}}
-</style>
+
+:root{color-scheme:light}
+.btn-solid{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-solid:hover{background:var(--accent-d);border-color:var(--accent-d)}
+.btn-ghost{border-color:var(--accent);color:var(--accent)}
+.btn-ghost:hover{background:var(--wash)}
+.lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.chart .bar-r{fill:var(--accent)}
+.chart .bar-r.soft{fill:var(--accent);opacity:.28}
+.chart .budget{stroke:var(--ink-2)}
+.post,.way{border-top-color:var(--accent)}
+.contact{background:var(--accent);color:#fff}
+.contact h2{color:#fff}
+.contact .btn{background:#fff;color:var(--accent);border-color:#fff}
+.contact .direct a{color:#fff}
+input,select,textarea{color:#fff}
+.creds{border-left-color:var(--accent)}
+/* waitlist */
+.wl{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.wl input{flex:1 1 200px;color:var(--ink);border:1px solid var(--line);background:var(--bg);padding:10px 12px;font-size:15px}
+.wl input:focus{border-color:var(--accent)}
+.wl .btn{padding:10px 16px;font-size:14.5px}
+.wl-msg{flex-basis:100%;margin:2px 0 0;font-size:14px;color:var(--ink-2);min-height:1em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* booking block on contact */
+.booknow{margin:0 0 30px;padding:18px 0;border-top:1px solid rgba(255,255,255,.25);border-bottom:1px solid rgba(255,255,255,.25)}
+.booknow p{margin:0 0 12px;opacity:.85}
+/* footer */
+footer .links{display:flex;gap:18px;flex-wrap:wrap}
+footer a{color:var(--ink-2)}
+footer a:hover{color:var(--accent)}
+/* article + legal */
+.article{max-width:700px;margin:0 auto;padding:72px 28px 40px}
+.article .meta{color:var(--accent);font-size:14.5px;font-weight:500;margin-bottom:16px}
+.article h1{font-size:clamp(34px,4.4vw,50px);line-height:1.1;margin-bottom:24px}
+.article h2{font-size:28px;margin:44px 0 12px}
+.article p,.article li{font-family:var(--serif);font-size:20px;line-height:1.65;color:var(--ink)}
+.article .lead{color:var(--ink-2)}
+.article ul{padding-left:22px}
+.article .box{background:var(--wash);border-left:3px solid var(--accent);padding:18px 22px;margin:28px 0}
+.article .box p{margin:0;font-size:18px}
+.back{display:inline-block;margin-bottom:28px;font-size:15px;color:var(--accent)}
+.post a.read{color:var(--accent);font-size:15px;font-weight:500;display:inline-block;margin-top:12px}
+.post .soon{display:inline-block;margin-top:12px;font-size:14px;color:var(--ink-2)}
+.legal{max-width:760px;margin:0 auto;padding:72px 28px 40px}
+.legal h2{font-size:26px;margin:36px 0 10px}
+.legal p{color:var(--ink-2);margin:0 0 12px}
+
+.ways-4{grid-template-columns:repeat(4,1fr);gap:32px}
+@media (max-width:1100px){.ways-4{grid-template-columns:repeat(2,1fr);gap:40px}}
+@media (max-width:700px){.ways-4{grid-template-columns:1fr}}
+@media (max-width:960px){nav{justify-content:flex-start;overflow-x:auto;gap:20px;padding-left:16px;padding-right:16px;white-space:nowrap;scrollbar-width:none}}
+</style><script src="config.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">
   <a class="brand" href="index.html">Mohammed Serrou</a>
-  <nav aria-label="Navigation principale"><a href="services.html" data-nav="services"><span lang="fr">Services</span><span lang="en">Services</span></a><a href="formations.html" data-nav="formations"><span lang="fr">Formations</span><span lang="en">Courses</span></a><a href="mentorat.html" data-nav="mentorat"><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></a><a href="a-propos.html" data-nav="a-propos"><span lang="fr">À propos</span><span lang="en">About</span></a><a href="blog.html" data-nav="blog"><span lang="fr">Blog</span><span lang="en">Blog</span></a><a href="contact.html" data-nav="contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a></nav>
+  <nav aria-label="Navigation principale"><a href="services.html" data-nav="services"><span lang="fr">Services</span><span lang="en">Services</span></a><a href="formations.html" data-nav="formations"><span lang="fr">Formations</span><span lang="en">Courses</span></a><a href="mentorat.html" data-nav="mentorat"><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></a><a href="freelances.html" data-nav="freelances"><span lang="fr">Freelances</span><span lang="en">Freelancers</span></a><a href="a-propos.html" data-nav="a-propos"><span lang="fr">À propos</span><span lang="en">About</span></a><a href="blog.html" data-nav="blog"><span lang="fr">Blog</span><span lang="en">Blog</span></a><a href="contact.html" data-nav="contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a></nav>
   <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr" aria-pressed="true">FR</button><button type="button" data-set="en" aria-pressed="false">EN</button></div>
-  <a class="btn btn-solid" href="contact.html"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
+  <a class="btn btn-solid" href="contact.html" data-booking><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
 </div></header><main>
 <div class="hero">
   <div class="wrap">
@@ -229,7 +290,7 @@ nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-under
         <span lang="en">I help small and mid-sized business owners set up budgets, dashboards and reporting that actually support decisions. I also train and mentor people who want to build a career in management control.</span>
       </p>
       <div class="ctas">
-        <a class="btn btn-solid" href="contact.html"><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
+        <a class="btn btn-solid" href="contact.html" data-booking><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
         <a class="btn btn-ghost" href="formations.html"><span lang="fr">Voir les formations</span><span lang="en">See the courses</span></a>
       </div>
       <p class="creds">
@@ -273,13 +334,18 @@ nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-under
 <section class="alt"><div class="wrap">
   <div class="head">
     <h2><span lang="fr">Comment je peux vous aider</span><span lang="en">How I can help</span></h2>
-    <p><span lang="fr">Trois portes d’entrée, selon votre situation.</span><span lang="en">Three ways in, depending on where you are.</span></p>
+    <p><span lang="fr">Quatre portes d’entrée, selon votre situation.</span><span lang="en">Four ways in, depending on where you are.</span></p>
   </div>
-  <div class="ways">
+  <div class="ways ways-4">
     <a class="way" href="services.html">
       <h3><span lang="fr">Vous dirigez une PME</span><span lang="en">You run a business</span></h3>
       <p><span lang="fr">Budget, coûts, trésorerie, tableaux de bord et BI : je structure votre pilotage et vous rends autonome.</span><span lang="en">Budget, costs, cash, dashboards and BI: I structure your steering and make you self-sufficient.</span></p>
       <span class="more"><span lang="fr">Voir les services</span><span lang="en">See services</span></span>
+    </a>
+    <a class="way" href="freelances.html">
+      <h3><span lang="fr">Vous êtes freelance</span><span lang="en">You’re a freelancer</span></h3>
+      <p><span lang="fr">Charges, abonnements, impôts à provisionner, TJM : on fait le point pour savoir ce que vous gagnez vraiment.</span><span lang="en">Costs, subscriptions, taxes to set aside, day rate: we work out what you really earn.</span></p>
+      <span class="more"><span lang="fr">Voir l’offre freelance</span><span lang="en">See freelancer offer</span></span>
     </a>
     <a class="way" href="formations.html">
       <h3><span lang="fr">Vous voulez apprendre</span><span lang="en">You want to learn</span></h3>
@@ -330,27 +396,62 @@ nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-under
 
 <section class="band alt"><div class="wrap">
   <h2><span lang="fr">Un projet, une question ? Prenons 30 minutes.</span><span lang="en">A project or a question? Let’s take 30 minutes.</span></h2>
-  <a class="btn btn-solid" href="contact.html"><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
-</div></section></main><footer>
-  <div class="wrap">
-    <span>© 2026 Mohammed Serrou</span>
-    <span><span lang="fr">Contrôle de gestion, BI, formations et mentorat</span><span lang="en">Management control, BI, training and mentoring</span></span>
-  </div>
-</footer><script>(function(){
-  var root=document.documentElement, btns=document.querySelectorAll('.lang button');
+  <a class="btn btn-solid" href="contact.html" data-booking><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
+</div></section></main><footer><div class="wrap">
+  <span>© 2026 Mohammed Serrou</span>
+  <span class="links">
+    <a data-social="linkedin" hidden target="_blank" rel="noopener">LinkedIn</a>
+    <a data-social="youtube" hidden target="_blank" rel="noopener">YouTube</a>
+    <a data-social="instagram" hidden target="_blank" rel="noopener">Instagram</a>
+    <a data-social="tiktok" hidden target="_blank" rel="noopener">TikTok</a>
+    <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
+  </span>
+</div></footer><script>(function(){
+  var C=window.SITE_CONFIG||{}, root=document.documentElement, btns=document.querySelectorAll('.lang button');
+  function isEn(){return root.getAttribute('data-lang')==='en';}
   function setLang(l){root.setAttribute('data-lang',l);root.setAttribute('lang',l);
     btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false');});
+    document.querySelectorAll('[data-ph-fr]').forEach(function(i){i.placeholder=i.getAttribute('data-ph-'+l);});
     try{localStorage.setItem('ms-lang',l);}catch(e){}}
   var saved=null;try{saved=localStorage.getItem('ms-lang');}catch(e){}
-  if(saved==='fr'||saved==='en')setLang(saved);
+  setLang(saved==='en'?'en':'fr');
   btns.forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set);});});
+  // booking link
+  if(C.bookingUrl){
+    document.querySelectorAll('[data-booking]').forEach(function(a){a.href=C.bookingUrl;a.target='_blank';a.rel='noopener';});
+    document.querySelectorAll('[data-booking-block]').forEach(function(b){b.hidden=false;});
+  }
+  // social links
+  document.querySelectorAll('[data-social]').forEach(function(a){var u=C[a.dataset.social];if(u){a.href=u;a.hidden=false;}});
+  function send(data,onOk,onErr){
+    fetch(C.formEndpoint,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){r.ok?onOk():onErr();}).catch(onErr);
+  }
+  // waitlist forms
+  document.querySelectorAll('form.wl').forEach(function(f){
+    var msg=f.querySelector('.wl-msg'), inp=f.querySelector('input');
+    f.addEventListener('submit',function(e){e.preventDefault();
+      if(!inp.value.trim()||!inp.checkValidity()){msg.textContent=isEn()?'Enter a valid email address.':'Saisissez une adresse email valide.';inp.focus();return;}
+      var course=f.dataset.course;
+      if(!C.formEndpoint){window.location.href='mailto:serrou.mohammed@outlook.com?subject='+encodeURIComponent('Liste d’attente : '+course)+'&body='+encodeURIComponent('Email : '+inp.value.trim());return;}
+      msg.textContent=isEn()?'Sending…':'Envoi…';
+      send({type:'Liste d’attente',formation:course,email:inp.value.trim()},
+        function(){f.reset();msg.textContent=isEn()?'Done. You’ll be notified when enrolment opens.':'C’est noté. Vous serez prévenu à l’ouverture des inscriptions.';},
+        function(){msg.textContent=isEn()?'Sending failed. Write to serrou.mohammed@outlook.com.':'L’envoi a échoué. Écrivez à serrou.mohammed@outlook.com.';});
+    });
+  });
+  // contact form
   var f=document.getElementById('contactForm');
-  if(f){var hint=document.getElementById('formHint');
-    f.addEventListener('submit',function(e){e.preventDefault();var en=root.getAttribute('data-lang')==='en';
+  if(f){var hint=document.getElementById('formHint'), sub=f.querySelector('button[type=submit]');
+    f.addEventListener('submit',function(e){e.preventDefault();
       if(!f.name.value.trim()||!f.email.value.trim()||!f.email.checkValidity()){
-        hint.textContent=en?'Add your name and a valid email address to send the request.':'Indiquez votre nom et une adresse email valide pour envoyer la demande.';
+        hint.textContent=isEn()?'Add your name and a valid email address to send the request.':'Indiquez votre nom et une adresse email valide pour envoyer la demande.';
         (f.name.value.trim()?f.email:f.name).focus();return;}
-      var subject='Demande : '+f.need.value+' — '+f.name.value.trim();
-      var body='Nom : '+f.name.value.trim()+'\nEmail : '+f.email.value.trim()+'\nBesoin : '+f.need.value+'\n\n'+f.msg.value.trim();
-      window.location.href='mailto:serrou.mohammed@outlook.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);});}
+      var d={type:'Contact',nom:f.name.value.trim(),email:f.email.value.trim(),besoin:f.need.value,message:f.msg.value.trim()};
+      if(!C.formEndpoint){
+        window.location.href='mailto:serrou.mohammed@outlook.com?subject='+encodeURIComponent('Demande : '+d.besoin+' — '+d.nom)+'&body='+encodeURIComponent('Nom : '+d.nom+'\nEmail : '+d.email+'\nBesoin : '+d.besoin+'\n\n'+d.message);return;}
+      sub.disabled=true;hint.textContent=isEn()?'Sending…':'Envoi…';
+      send(d,function(){f.reset();sub.disabled=false;hint.textContent=isEn()?'Request sent. I’ll reply within 48 hours.':'Demande envoyée. Je vous réponds sous 48 heures.';},
+        function(){sub.disabled=false;hint.textContent=isEn()?'Sending failed. Write to serrou.mohammed@outlook.com.':'L’envoi a échoué. Écrivez directement à serrou.mohammed@outlook.com.';});
+    });}
 })();</script></body></html>
