@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact | Mohammed Serrou</title>
+<meta name="description" content="Contrôle de gestion pour PME, business intelligence, formations et mentorat. Des chiffres clairs pour piloter et décider.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head><body><header><div class="wrap bar">
+  <a class="brand" href="index.html">Mohammed Serrou</a>
+  <nav aria-label="Navigation principale"><a href="services.html" data-nav="services"><span lang="fr">Services</span><span lang="en">Services</span></a><a href="formations.html" data-nav="formations"><span lang="fr">Formations</span><span lang="en">Courses</span></a><a href="mentorat.html" data-nav="mentorat"><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></a><a href="a-propos.html" data-nav="a-propos"><span lang="fr">À propos</span><span lang="en">About</span></a><a href="blog.html" data-nav="blog"><span lang="fr">Blog</span><span lang="en">Blog</span></a><a href="contact.html" aria-current="page" data-nav="contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a></nav>
+  <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr" aria-pressed="true">FR</button><button type="button" data-set="en" aria-pressed="false">EN</button></div>
+  <a class="btn btn-solid" href="contact.html"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
+</div></header><main>
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div>
+      <h2><span lang="fr">Parlons de votre projet</span><span lang="en">Let’s talk about your project</span></h2>
+      <p class="intro">
+        <span lang="fr">Dites-moi en quelques lignes ce dont vous avez besoin. Je vous réponds sous 48 heures pour fixer un appel découverte gratuit.</span>
+        <span lang="en">Tell me in a few lines what you need. I’ll reply within 48 hours to schedule a free discovery call.</span>
+      </p>
+      <div class="direct">
+        <a href="mailto:serrou.mohammed@outlook.com"><small>Email</small>serrou.mohammed@outlook.com</a>
+        <a href="https://wa.me/212609216678" target="_blank" rel="noopener"><small>WhatsApp</small>+212 6 09 21 66 78</a>
+      </div>
+    </div>
+
+    <form id="contactForm" novalidate>
+      <label><span lang="fr">Votre nom</span><span lang="en">Your name</span>
+        <input name="name" autocomplete="name" required>
+      </label>
+      <label><span lang="fr">Votre email</span><span lang="en">Your email</span>
+        <input name="email" type="email" autocomplete="email" required>
+      </label>
+      <label><span lang="fr">Votre besoin</span><span lang="en">What you need</span>
+        <select name="need">
+          <option value="Conseil en contrôle de gestion">Conseil en contrôle de gestion / Management control consulting</option>
+          <option value="Business intelligence">Business intelligence</option>
+          <option value="Formation">Formation / Training</option>
+          <option value="Mentorat">Mentorat / Mentoring</option>
+          <option value="Autre">Autre / Other</option>
+        </select>
+      </label>
+      <label><span lang="fr">Quelques mots sur votre situation</span><span lang="en">A few words about your situation</span>
+        <textarea name="msg"></textarea>
+      </label>
+      <button class="btn" type="submit"><span lang="fr">Envoyer ma demande</span><span lang="en">Send my request</span></button>
+      <p class="hint" id="formHint">
+        <span lang="fr">Le bouton ouvre votre messagerie avec le message déjà rempli.</span>
+        <span lang="en">The button opens your email app with the message pre-filled.</span>
+      </p>
+    </form>
+  </div>
+</section>
+
+</main><footer>
+  <div class="wrap">
+    <span>© 2026 Mohammed Serrou</span>
+    <span><span lang="fr">Contrôle de gestion, BI, formations et mentorat</span><span lang="en">Management control, BI, training and mentoring</span></span>
+  </div>
+</footer><script src="assets/site.js"></script></body></html>
