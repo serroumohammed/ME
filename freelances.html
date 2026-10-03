@@ -270,6 +270,30 @@ footer a:hover{color:var(--accent)}
 @media (max-width:1100px){.ways-4{grid-template-columns:repeat(2,1fr);gap:40px}}
 @media (max-width:700px){.ways-4{grid-template-columns:1fr}}
 @media (max-width:960px){nav{justify-content:flex-start;overflow-x:auto;gap:20px;padding-left:16px;padding-right:16px;white-space:nowrap;scrollbar-width:none}}
+
+.ctag{font-size:14px;color:var(--accent);font-weight:500;margin:6px 0 14px}
+.course-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;align-items:start}
+.course-layout h2{font-size:32px;margin-bottom:24px}
+.course-layout h2.mt{margin-top:56px}
+.modules{list-style:none;margin:0;padding:0;counter-reset:m;border-top:1px solid var(--line)}
+.modules > li{counter-increment:m;display:grid;grid-template-columns:48px 1fr;column-gap:8px;padding:20px 0;border-bottom:1px solid var(--line)}
+.modules > li::before{content:counter(m);font-family:var(--serif);font-size:30px;line-height:1;color:var(--accent);grid-row:span 3}
+.modules h3{font-size:21px;margin:0 0 4px}
+.modules p{margin:0;color:var(--ink-2);font-size:15.5px}
+.modules .lessons{grid-column:2;list-style:none;margin:10px 0 0;padding:0;font-size:15px}
+.modules .lessons li{display:block;padding:3px 0 3px 18px;position:relative;border:0}
+.modules .lessons li::before{content:"";position:absolute;left:2px;top:13px;width:8px;height:1.5px;background:var(--accent)}
+.outcomes{margin:0;padding:0;list-style:none}
+.outcomes li{padding:9px 0 9px 26px;position:relative}
+.outcomes li::before{content:"";position:absolute;left:2px;top:17px;width:12px;height:7px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+.aside{position:sticky;top:96px;border:1px solid var(--line);border-top:3px solid var(--accent);padding:28px;background:var(--bg)}
+.aside dl{margin:0 0 22px;display:grid;gap:4px}
+.aside dt{font-size:13.5px;color:var(--ink-2);margin-top:12px}
+.aside dt:first-child{margin-top:0}
+.aside dd{margin:0;font-size:15.5px}
+.aside-cta{font-size:15px;margin:0 0 12px;padding-top:18px;border-top:1px solid var(--line)}
+.prog{display:inline-block;margin:0 0 18px;color:var(--accent);font-weight:500;font-size:15px}
+@media (max-width:960px){.course-layout{grid-template-columns:1fr;gap:40px}.aside{position:static}}
 </style><script src="config.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">
@@ -283,12 +307,12 @@ footer a:hover{color:var(--accent)}
 </div></div>
 <section><div class="wrap">
   <div class="head"><h2><span lang="fr">Ce que l’on regarde ensemble</span><span lang="en">What we look at together</span></h2>
-    <p><span lang="fr">Pour les freelances en France (micro-entreprise, portage, société) et au Maroc (auto-entrepreneurs).</span><span lang="en">For freelancers in France (micro-business, umbrella company, company) and in Morocco (self-employed status).</span></p></div>
+    <p><span lang="fr">Pour les freelances au Maroc : auto-entrepreneurs, SARL AU, et ceux qui travaillent pour des clients à l’étranger.</span><span lang="en">For freelancers in Morocco: self-employed status, single-member companies, and those working for clients abroad.</span></p></div>
   <ul class="who">
     <li><strong><span lang="fr">Charges et abonnements</span><span lang="en">Costs and subscriptions</span></strong>
       <span class="d"><span lang="fr">Logiciels, outils, assurances, téléphone, coworking : on liste tout ce qui sort chaque mois, on repère les doublons et on décide quoi garder.</span><span lang="en">Software, tools, insurance, phone, coworking: we list every monthly outflow, spot duplicates and decide what to keep.</span></span></li>
     <li><strong><span lang="fr">Impôts et cotisations à provisionner</span><span lang="en">Taxes and contributions to set aside</span></strong>
-      <span class="d"><span lang="fr">On estime ce que vous devez mettre de côté chaque mois, pour ne plus être surpris au moment de payer.</span><span lang="en">We estimate what to set aside each month, so payment deadlines no longer catch you off guard.</span></span></li>
+      <span class="d"><span lang="fr">Impôt de l’auto-entrepreneur, CNSS, seuil des 80 000 DH par client : on estime ce que vous devez mettre de côté chaque mois, pour ne plus être surpris au moment de payer.</span><span lang="en">Self-employed tax, CNSS, the 80,000 DH per-client threshold: we estimate what to set aside each month, so payment deadlines no longer catch you off guard.</span></span></li>
     <li><strong><span lang="fr">Votre vrai revenu</span><span lang="en">Your real income</span></strong>
       <span class="d"><span lang="fr">Ce qu’il vous reste réellement après charges, impôts, cotisations et jours non facturés.</span><span lang="en">What you actually keep after costs, taxes, contributions and unbilled days.</span></span></li>
     <li><strong><span lang="fr">Votre TJM</span><span lang="en">Your day rate</span></strong>

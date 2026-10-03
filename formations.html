@@ -270,6 +270,30 @@ footer a:hover{color:var(--accent)}
 @media (max-width:1100px){.ways-4{grid-template-columns:repeat(2,1fr);gap:40px}}
 @media (max-width:700px){.ways-4{grid-template-columns:1fr}}
 @media (max-width:960px){nav{justify-content:flex-start;overflow-x:auto;gap:20px;padding-left:16px;padding-right:16px;white-space:nowrap;scrollbar-width:none}}
+
+.ctag{font-size:14px;color:var(--accent);font-weight:500;margin:6px 0 14px}
+.course-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;align-items:start}
+.course-layout h2{font-size:32px;margin-bottom:24px}
+.course-layout h2.mt{margin-top:56px}
+.modules{list-style:none;margin:0;padding:0;counter-reset:m;border-top:1px solid var(--line)}
+.modules > li{counter-increment:m;display:grid;grid-template-columns:48px 1fr;column-gap:8px;padding:20px 0;border-bottom:1px solid var(--line)}
+.modules > li::before{content:counter(m);font-family:var(--serif);font-size:30px;line-height:1;color:var(--accent);grid-row:span 3}
+.modules h3{font-size:21px;margin:0 0 4px}
+.modules p{margin:0;color:var(--ink-2);font-size:15.5px}
+.modules .lessons{grid-column:2;list-style:none;margin:10px 0 0;padding:0;font-size:15px}
+.modules .lessons li{display:block;padding:3px 0 3px 18px;position:relative;border:0}
+.modules .lessons li::before{content:"";position:absolute;left:2px;top:13px;width:8px;height:1.5px;background:var(--accent)}
+.outcomes{margin:0;padding:0;list-style:none}
+.outcomes li{padding:9px 0 9px 26px;position:relative}
+.outcomes li::before{content:"";position:absolute;left:2px;top:17px;width:12px;height:7px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+.aside{position:sticky;top:96px;border:1px solid var(--line);border-top:3px solid var(--accent);padding:28px;background:var(--bg)}
+.aside dl{margin:0 0 22px;display:grid;gap:4px}
+.aside dt{font-size:13.5px;color:var(--ink-2);margin-top:12px}
+.aside dt:first-child{margin-top:0}
+.aside dd{margin:0;font-size:15.5px}
+.aside-cta{font-size:15px;margin:0 0 12px;padding-top:18px;border-top:1px solid var(--line)}
+.prog{display:inline-block;margin:0 0 18px;color:var(--accent);font-weight:500;font-size:15px}
+@media (max-width:960px){.course-layout{grid-template-columns:1fr;gap:40px}.aside{position:static}}
 </style><script src="config.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">
@@ -286,12 +310,12 @@ footer a:hover{color:var(--accent)}
     <div class="courses">
       <article class="course">
         <div class="tag"><span lang="fr">Pour débuter</span><span lang="en">Beginner</span></div>
-        <h3><span lang="fr">Contrôle de gestion : les fondamentaux</span><span lang="en">Management control fundamentals</span></h3>
+        <h3><a href="formation-controle-de-gestion.html" style="text-decoration:none"><span lang="fr">Contrôle de gestion : les fondamentaux</span><span lang="en">Management control fundamentals</span></a></h3>
         <p><span lang="fr">Comprendre les coûts, construire un budget, analyser les écarts et monter un premier tableau de bord.</span><span lang="en">Understand costs, build a budget, analyse variances and create your first dashboard.</span></p>
         <dl>
           <dt><span lang="fr">Public</span><span lang="en">For</span></dt><dd><span lang="fr">Étudiants, dirigeants, profils non financiers</span><span lang="en">Students, owners, non-finance profiles</span></dd>
           <dt>Format</dt><dd><span lang="fr">Vidéo, exercices, modèles Excel</span><span lang="en">Video, exercises, Excel templates</span></dd>
-        </dl>
+        </dl><a class="prog" href="formation-controle-de-gestion.html"><span lang="fr">Voir le programme</span><span lang="en">See the curriculum</span></a>
         <form class="wl" data-course="Contrôle de gestion fondamentaux" novalidate>
           <label class="sr">Email</label>
           <input type="email" name="email" autocomplete="email" required data-ph-fr="Votre email" data-ph-en="Your email" placeholder="Votre email">
@@ -302,12 +326,12 @@ footer a:hover{color:var(--accent)}
 
       <article class="course">
         <div class="tag"><span lang="fr">Spécialisation</span><span lang="en">Specialisation</span></div>
-        <h3><span lang="fr">Contrôle de gestion bancaire</span><span lang="en">Management control in banking</span></h3>
+        <h3><a href="formation-controle-de-gestion-bancaire.html" style="text-decoration:none"><span lang="fr">Contrôle de gestion bancaire</span><span lang="en">Management control in banking</span></a></h3>
         <p><span lang="fr">Rentabilité par agence, par produit et par client, PNB, coût du risque et pilotage commercial d’un réseau bancaire.</span><span lang="en">Profitability by branch, product and client, net banking income, cost of risk and commercial steering of a bank network.</span></p>
         <dl>
           <dt><span lang="fr">Public</span><span lang="en">For</span></dt><dd><span lang="fr">Contrôleurs de gestion, banquiers, candidats au secteur</span><span lang="en">Controllers, bankers, banking job seekers</span></dd>
           <dt>Format</dt><dd><span lang="fr">Vidéo, études de cas, modèles</span><span lang="en">Video, case studies, templates</span></dd>
-        </dl>
+        </dl><a class="prog" href="formation-controle-de-gestion-bancaire.html"><span lang="fr">Voir le programme</span><span lang="en">See the curriculum</span></a>
         <form class="wl" data-course="Contrôle de gestion bancaire" novalidate>
           <label class="sr">Email</label>
           <input type="email" name="email" autocomplete="email" required data-ph-fr="Votre email" data-ph-en="Your email" placeholder="Votre email">
@@ -318,12 +342,12 @@ footer a:hover{color:var(--accent)}
 
       <article class="course">
         <div class="tag"><span lang="fr">Pour débuter</span><span lang="en">Beginner</span></div>
-        <h3><span lang="fr">Initiation à la business intelligence</span><span lang="en">Introduction to business intelligence</span></h3>
+        <h3><a href="formation-business-intelligence.html" style="text-decoration:none"><span lang="fr">Initiation à la business intelligence</span><span lang="en">Introduction to business intelligence</span></a></h3>
         <p><span lang="fr">Comprendre la chaîne de la donnée, choisir les bons indicateurs et concevoir des tableaux de bord qui se lisent vite.</span><span lang="en">Understand the data chain, choose the right indicators and design dashboards people can read at a glance.</span></p>
         <dl>
           <dt><span lang="fr">Public</span><span lang="en">For</span></dt><dd><span lang="fr">Profils finance et métier, sans prérequis technique</span><span lang="en">Finance and business profiles, no tech background needed</span></dd>
           <dt>Format</dt><dd><span lang="fr">Vidéo et exercices guidés</span><span lang="en">Video and guided exercises</span></dd>
-        </dl>
+        </dl><a class="prog" href="formation-business-intelligence.html"><span lang="fr">Voir le programme</span><span lang="en">See the curriculum</span></a>
         <form class="wl" data-course="Initiation BI" novalidate>
           <label class="sr">Email</label>
           <input type="email" name="email" autocomplete="email" required data-ph-fr="Votre email" data-ph-en="Your email" placeholder="Votre email">
@@ -334,12 +358,12 @@ footer a:hover{color:var(--accent)}
 
       <article class="course">
         <div class="tag"><span lang="fr">Freelances</span><span lang="en">Freelancers</span></div>
-        <h3><span lang="fr">Calculer son TJM, pas l’estimer</span><span lang="en">Calculate your day rate, don’t guess it</span></h3>
+        <h3><a href="formation-calcul-tjm.html" style="text-decoration:none"><span lang="fr">Calculer son TJM, pas l’estimer</span><span lang="en">Calculate your day rate, don’t guess it</span></a></h3>
         <p><span lang="fr">Partir de vos charges, de vos jours réellement facturables et de votre objectif de revenu pour fixer un tarif défendable.</span><span lang="en">Start from your costs, your real billable days and your income goal to set a rate you can defend.</span></p>
         <dl>
-          <dt><span lang="fr">Public</span><span lang="en">For</span></dt><dd><span lang="fr">Freelances et consultants indépendants</span><span lang="en">Freelancers and independent consultants</span></dd>
+          <dt><span lang="fr">Public</span><span lang="en">For</span></dt><dd><span lang="fr">Freelances et consultants indépendants au Maroc</span><span lang="en">Freelancers and independent consultants in Morocco</span></dd>
           <dt>Format</dt><dd><span lang="fr">Vidéo, calculateur Excel, ressources PDF</span><span lang="en">Video, Excel calculator, PDF resources</span></dd>
-        </dl>
+        </dl><a class="prog" href="formation-calcul-tjm.html"><span lang="fr">Voir le programme</span><span lang="en">See the curriculum</span></a>
         <form class="wl" data-course="Calcul du TJM" novalidate>
           <label class="sr">Email</label>
           <input type="email" name="email" autocomplete="email" required data-ph-fr="Votre email" data-ph-en="Your email" placeholder="Votre email">
