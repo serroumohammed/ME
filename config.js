@@ -5,7 +5,7 @@
 // ============================================================
 window.SITE_CONFIG = {
   // Lien Calendly ou Cal.com (ex : "https://calendly.com/ton-nom/30min")
-  bookingUrl: "",
+  bookingUrl: "https://cal.com/serroumohammed",
 
   // Lien Formspree pour recevoir les formulaires par email (ex : "https://formspree.io/f/abcdwxyz")
   formEndpoint: "https://formspree.io/f/xljdqkgd",
