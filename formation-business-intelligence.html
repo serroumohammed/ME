@@ -294,13 +294,32 @@ footer a:hover{color:var(--accent)}
 .aside-cta{font-size:15px;margin:0 0 12px;padding-top:18px;border-top:1px solid var(--line)}
 .prog{display:inline-block;margin:0 0 18px;color:var(--accent);font-weight:500;font-size:15px}
 @media (max-width:960px){.course-layout{grid-template-columns:1fr;gap:40px}.aside{position:static}}
+
+.menu-btn{display:none;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 14px var(--sans);padding:7px 12px;border-radius:6px;cursor:pointer}
+.menu-btn .bars{width:16px;height:10px;position:relative;display:inline-block;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor}
+.menu-btn .bars::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1.5px solid currentColor;transform:translateY(-50%)}
+.brand,nav a,.bar .btn{white-space:nowrap}
+nav{gap:20px}
+@media (max-width:420px){.brand{font-size:18px}}
+.wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:56px;height:56px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(122,31,61,.28);text-decoration:none}
+.wa:hover{background:var(--accent-d)}
+.wa svg{width:28px;height:28px}
+@media (max-width:1100px){
+  nav{display:none;position:absolute;top:100%;bottom:auto;left:0;right:0;flex-direction:column;justify-content:flex-start;gap:0;padding:6px 20px 14px;background:var(--bg);border-top:0;border-bottom:1px solid var(--line);overflow:visible;white-space:normal;box-shadow:0 12px 24px rgba(33,26,29,.06)}
+  nav.open{display:flex}
+  nav a{font-size:17px;padding:13px 0;border-bottom:1px solid var(--line)}
+  nav a:last-child{border-bottom:0}
+  body{padding-bottom:0}
+  .menu-btn{display:inline-flex}
+  .bar{gap:12px}
+}
 </style><script src="config.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">
   <a class="brand" href="index.html">Mohammed Serrou</a>
-  <nav aria-label="Navigation principale"><a href="services.html" data-nav="services"><span lang="fr">Services</span><span lang="en">Services</span></a><a href="formations.html" aria-current="page" data-nav="formations"><span lang="fr">Formations</span><span lang="en">Courses</span></a><a href="mentorat.html" data-nav="mentorat"><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></a><a href="freelances.html" data-nav="freelances"><span lang="fr">Freelances</span><span lang="en">Freelancers</span></a><a href="a-propos.html" data-nav="a-propos"><span lang="fr">À propos</span><span lang="en">About</span></a><a href="blog.html" data-nav="blog"><span lang="fr">Blog</span><span lang="en">Blog</span></a><a href="contact.html" data-nav="contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a></nav>
+  <nav id="mainnav" aria-label="Navigation principale"><a href="services.html" data-nav="services"><span lang="fr">Services</span><span lang="en">Services</span></a><a href="formations.html" aria-current="page" data-nav="formations"><span lang="fr">Formations</span><span lang="en">Courses</span></a><a href="mentorat.html" data-nav="mentorat"><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></a><a href="freelances.html" data-nav="freelances"><span lang="fr">Freelances</span><span lang="en">Freelancers</span></a><a href="a-propos.html" data-nav="a-propos"><span lang="fr">À propos</span><span lang="en">About</span></a><a href="blog.html" data-nav="blog"><span lang="fr">Blog</span><span lang="en">Blog</span></a><a href="contact.html" data-nav="contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a></nav><button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="bars" aria-hidden="true"></span><span lang="fr">Menu</span><span lang="en">Menu</span></button>
   <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr" aria-pressed="true">FR</button><button type="button" data-set="en" aria-pressed="false">EN</button></div>
-  <a class="btn btn-solid" href="contact.html" data-booking><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
+  <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
 </div></header><main><div class="page-head"><div class="wrap">
   <a class="back" href="formations.html"><span lang="fr">Toutes les formations</span><span lang="en">All courses</span></a>
   <div class="tag ctag"><span lang="fr">Pour débuter</span><span lang="en">Beginner</span></div>
@@ -335,7 +354,7 @@ footer a:hover{color:var(--accent)}
   <div class="faq"><details><summary><span lang="fr">Vais-je apprendre un logiciel précis ?</span><span lang="en">Will I learn a specific tool?</span></summary><p><span lang="fr">Les concepts sont valables quel que soit l’outil. L’atelier pratique utilise Power BI Desktop, gratuit et le plus répandu en entreprise.</span><span lang="en">The concepts apply to any tool. The workshop uses Power BI Desktop, which is free and the most widely used in companies.</span></p></details><details><summary><span lang="fr">Je n’ai jamais codé, est-ce un problème ?</span><span lang="en">I’ve never coded, is that a problem?</span></summary><p><span lang="fr">Non. Tout se fait sans code, avec des manipulations guidées pas à pas.</span><span lang="en">No. Everything is done without code, with step-by-step guidance.</span></p></details><details><summary><span lang="fr">Quand la formation sera-t-elle disponible ?</span><span lang="en">When will the course be available?</span></summary><p><span lang="fr">Les inscriptions ouvrent bientôt. Laissez votre email sur cette page pour être prévenu en premier.</span><span lang="en">Enrolment opens soon. Leave your email on this page to be the first to know.</span></p></details><details><summary><span lang="fr">Est-ce une formation en direct ?</span><span lang="en">Is it a live course?</span></summary><p><span lang="fr">Non. Ce sont des vidéos à suivre à votre rythme, quand vous voulez.</span><span lang="en">No. These are videos you follow at your own pace, whenever you like.</span></p></details><details><summary><span lang="fr">Existe-t-il une version pour les équipes ?</span><span lang="en">Is there a version for teams?</span></summary><p><span lang="fr">Oui. Je peux adapter le contenu en session sur mesure pour une équipe, en présentiel ou à distance.</span><span lang="en">Yes. I can adapt the content into a tailored session for a team, on site or remote.</span></p></details></div>
 </div></section><section class="band"><div class="wrap">
   <h2><span lang="fr">Un projet, une question ? Prenons 30 minutes.</span><span lang="en">A project or a question? Let’s take 30 minutes.</span></h2>
-  <a class="btn btn-solid" href="contact.html" data-booking><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
+  <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
 </div></section></main><footer><div class="wrap">
   <span>© 2026 Mohammed Serrou</span>
   <span class="links">
@@ -357,7 +376,7 @@ footer a:hover{color:var(--accent)}
   btns.forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set);});});
   // booking link
   if(C.bookingUrl){
-    document.querySelectorAll('[data-booking]').forEach(function(a){a.href=C.bookingUrl;a.target='_blank';a.rel='noopener';});
+    document.querySelectorAll('[data-booking]').forEach(function(a){a.href=C.bookingUrl.replace(/\/$/,'')+(a.dataset.booking?'/'+a.dataset.booking:'');a.target='_blank';a.rel='noopener';});
     document.querySelectorAll('[data-booking-block]').forEach(function(b){b.hidden=false;});
   }
   // social links
@@ -372,11 +391,11 @@ footer a:hover{color:var(--accent)}
     f.addEventListener('submit',function(e){e.preventDefault();
       if(!inp.value.trim()||!inp.checkValidity()){msg.textContent=isEn()?'Enter a valid email address.':'Saisissez une adresse email valide.';inp.focus();return;}
       var course=f.dataset.course;
-      if(!C.formEndpoint){window.location.href='mailto:serrou.mohammed@outlook.com?subject='+encodeURIComponent('Liste d’attente : '+course)+'&body='+encodeURIComponent('Email : '+inp.value.trim());return;}
+      if(!C.formEndpoint){window.location.href='mailto:contact@serroumohammed.com?subject='+encodeURIComponent('Liste d’attente : '+course)+'&body='+encodeURIComponent('Email : '+inp.value.trim());return;}
       msg.textContent=isEn()?'Sending…':'Envoi…';
       send({type:'Liste d’attente',formation:course,email:inp.value.trim()},
         function(){f.reset();msg.textContent=isEn()?'Done. You’ll be notified when enrolment opens.':'C’est noté. Vous serez prévenu à l’ouverture des inscriptions.';},
-        function(){msg.textContent=isEn()?'Sending failed. Write to serrou.mohammed@outlook.com.':'L’envoi a échoué. Écrivez à serrou.mohammed@outlook.com.';});
+        function(){msg.textContent=isEn()?'Sending failed. Write to contact@serroumohammed.com.':'L’envoi a échoué. Écrivez à contact@serroumohammed.com.';});
     });
   });
   // contact form
@@ -388,9 +407,15 @@ footer a:hover{color:var(--accent)}
         (f.name.value.trim()?f.email:f.name).focus();return;}
       var d={type:'Contact',nom:f.name.value.trim(),email:f.email.value.trim(),besoin:f.need.value,message:f.msg.value.trim()};
       if(!C.formEndpoint){
-        window.location.href='mailto:serrou.mohammed@outlook.com?subject='+encodeURIComponent('Demande : '+d.besoin+' — '+d.nom)+'&body='+encodeURIComponent('Nom : '+d.nom+'\nEmail : '+d.email+'\nBesoin : '+d.besoin+'\n\n'+d.message);return;}
+        window.location.href='mailto:contact@serroumohammed.com?subject='+encodeURIComponent('Demande : '+d.besoin+' — '+d.nom)+'&body='+encodeURIComponent('Nom : '+d.nom+'\nEmail : '+d.email+'\nBesoin : '+d.besoin+'\n\n'+d.message);return;}
       sub.disabled=true;hint.textContent=isEn()?'Sending…':'Envoi…';
       send(d,function(){f.reset();sub.disabled=false;hint.textContent=isEn()?'Request sent. I’ll reply within 48 hours.':'Demande envoyée. Je vous réponds sous 48 heures.';},
-        function(){sub.disabled=false;hint.textContent=isEn()?'Sending failed. Write to serrou.mohammed@outlook.com.':'L’envoi a échoué. Écrivez directement à serrou.mohammed@outlook.com.';});
+        function(){sub.disabled=false;hint.textContent=isEn()?'Sending failed. Write to contact@serroumohammed.com.':'L’envoi a échoué. Écrivez directement à contact@serroumohammed.com.';});
     });}
-})();</script></body></html>
+})();</script><a class="wa" href="https://wa.me/212609216678?text=Bonjour%20Mohammed%2C%20je%20viens%20de%20votre%20site." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 4.8 4.9-1.3A9.8 9.8 0 1 0 12 2.2zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.4z"/></svg></a><script>
+(function(){var b=document.querySelector('.menu-btn'),n=document.getElementById('mainnav');if(!b||!n)return;
+function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');}
+b.addEventListener('click',function(){set(!n.classList.contains('open'));});
+n.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+window.addEventListener('hashchange',function(){set(false);});})();</script></body></html>

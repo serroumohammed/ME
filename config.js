@@ -11,7 +11,7 @@ window.SITE_CONFIG = {
   formEndpoint: "https://formspree.io/f/xljdqkgd",
 
   // Réseaux sociaux (ex : "https://www.linkedin.com/in/ton-profil")
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/serrou-mohammed",
   youtube: "",
   instagram: "",
   tiktok: ""
