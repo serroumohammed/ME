@@ -295,6 +295,17 @@ footer a:hover{color:var(--accent)}
 .prog{display:inline-block;margin:0 0 18px;color:var(--accent);font-weight:500;font-size:15px}
 @media (max-width:960px){.course-layout{grid-template-columns:1fr;gap:40px}.aside{position:static}}
 
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.mcard{padding:28px 24px}
+.mcard .price{font-family:var(--serif);font-size:34px;line-height:1.1;color:var(--accent);margin:4px 0 12px}
+.mcard .price span{font-family:var(--sans);font-size:14px;color:var(--ink-2)}
+.mcard .incl{list-style:none;margin:0 0 24px;padding:0;font-size:14.5px}
+.mcard .incl li{padding:5px 0 5px 18px;position:relative}
+.mcard .incl li::before{content:"";position:absolute;left:0;top:14px;width:9px;height:1.5px;background:var(--accent)}
+.mcard .wl .btn{width:100%}
+@media (max-width:1100px){.mgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.mgrid{grid-template-columns:1fr}}
+
 .menu-btn{display:none;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 14px var(--sans);padding:7px 12px;border-radius:6px;cursor:pointer}
 .menu-btn .bars{width:16px;height:10px;position:relative;display:inline-block;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor}
 .menu-btn .bars::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1.5px solid currentColor;transform:translateY(-50%)}
@@ -321,46 +332,97 @@ nav{gap:20px}
   <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr" aria-pressed="true">FR</button><button type="button" data-set="en" aria-pressed="false">EN</button></div>
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
 </div></header><main><div class="page-head"><div class="wrap">
-  <h1><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></h1>
-  <p class="lede"><span lang="fr">Un accompagnement individuel pour avancer plus vite dans le contrôle de gestion, la finance ou la data.</span><span lang="en">One-to-one guidance to move faster in management control, finance or data.</span></p>
+  <h1><span lang="fr">Mentorat finance, contrôle de gestion et EPM</span><span lang="en">Mentoring in finance, management control and EPM</span></h1>
+  <p class="lede"><span lang="fr">Un accompagnement concret pour décrocher votre premier poste, progresser en contrôle de gestion ou réussir votre reconversion vers la finance, l’EPM ou la data.</span><span lang="en">Hands-on guidance to land your first job, grow in management control, or switch careers into finance, EPM or data.</span></p>
 </div></div>
-<section><div class="wrap">
-  <div class="head"><h2><span lang="fr">Pour qui</span><span lang="en">Who it’s for</span></h2><p></p></div>
-  <ul class="who">
-    <li><strong><span lang="fr">Étudiants en finance et gestion</span><span lang="en">Finance and business students</span></strong>
-      <span class="d"><span lang="fr">Vous préparez votre stage ou votre premier poste et voulez savoir ce qu’on attend vraiment d’un contrôleur de gestion.</span><span lang="en">You’re preparing for an internship or first job and want to know what’s really expected of a controller.</span></span></li>
-    <li><strong><span lang="fr">Jeunes contrôleurs de gestion</span><span lang="en">Junior controllers</span></strong>
-      <span class="d"><span lang="fr">Vous êtes en poste depuis peu et voulez gagner en méthode, en outils et en assurance face aux opérationnels.</span><span lang="en">You’re new in the role and want more method, better tools and more confidence with operational teams.</span></span></li>
-    <li><strong><span lang="fr">Personnes en reconversion</span><span lang="en">Career changers</span></strong>
-      <span class="d"><span lang="fr">Vous visez la finance, l’EPM ou la data et cherchez un chemin réaliste, étape par étape.</span><span lang="en">You’re aiming for finance, EPM or data and want a realistic, step-by-step path.</span></span></li>
-  </ul>
+<section><div class="wrap about">
+  <div>
+    <h2><span lang="fr">Pourquoi moi</span><span lang="en">Why me</span></h2>
+  </div>
+  <div class="txt">
+    <p><span lang="fr">Je suis passé par là où vous êtes : école de commerce, premier poste, choix d’une spécialité. Aujourd’hui, je suis consultant en pilotage de la performance et je forme des consultants juniors dans mon travail.</span><span lang="en">I’ve been where you are: business school, first job, choosing a specialty. Today I’m a performance management consultant and I train junior consultants as part of my job.</span></p>
+    <p><span lang="fr">Je ne vous donne pas de conseils génériques. Je vous partage ce que les recruteurs et les managers attendent réellement, parce que c’est mon quotidien.</span><span lang="en">I don’t give generic advice. I share what recruiters and managers really expect, because that’s my day-to-day.</span></p>
+    <ul class="facts">
+      <li><span><span lang="fr">Formation</span><span lang="en">Education</span></span><span>Master, ENCG Kénitra</span></li>
+      <li><span><span lang="fr">Métier</span><span lang="en">Role</span></span><span><span lang="fr">Consultant en pilotage de la performance (EPM)</span><span lang="en">Performance management (EPM) consultant</span></span></li>
+      <li><span>Certifications</span><span>Anaplan, Pigment</span></li>
+      <li><span><span lang="fr">Transmission</span><span lang="en">Teaching</span></span><span><span lang="fr">Formation de consultants juniors en entreprise</span><span lang="en">Training junior consultants at work</span></span></li>
+    </ul>
+  </div>
 </div></section>
 <section class="alt"><div class="wrap">
-  <div class="head"><h2><span lang="fr">Deux formats</span><span lang="en">Two formats</span></h2>
-    <p><span lang="fr">Tarifs communiqués sur demande.</span><span lang="en">Rates available on request.</span></p></div>
-  <div class="formats">
-    <article class="course">
+  <div class="head"><h2><span lang="fr">Pour qui</span><span lang="en">Who it’s for</span></h2><p></p></div>
+  <ul class="who"><li><strong><span lang="fr">Étudiants en école de commerce</span><span lang="en">Business school students</span></strong><span class="d"><span lang="fr">ENCG, ISCAE ou université : vous préparez un stage ou votre premier poste et voulez savoir ce que les recruteurs attendent vraiment.</span><span lang="en">ENCG, ISCAE or university: you’re preparing an internship or first job and want to know what recruiters really expect.</span></span></li><li><strong><span lang="fr">Jeunes diplômés en recherche d’emploi</span><span lang="en">Recent graduates looking for a job</span></strong><span class="d"><span lang="fr">Vous envoyez des candidatures sans réponse. On revoit votre cible, votre CV, votre LinkedIn et votre façon de postuler.</span><span lang="en">Your applications go unanswered. We rework your target, CV, LinkedIn and how you apply.</span></span></li><li><strong><span lang="fr">Contrôleurs de gestion juniors (0 à 3 ans)</span><span lang="en">Junior controllers (0 to 3 years)</span></strong><span class="d"><span lang="fr">Vous êtes en poste et voulez gagner en méthode, en outils et en assurance face aux opérationnels.</span><span lang="en">You’re in the job and want more method, better tools and more confidence with operational teams.</span></span></li><li><strong><span lang="fr">Personnes en reconversion</span><span lang="en">Career changers</span></strong><span class="d"><span lang="fr">Vous visez la finance, l’EPM ou la data et cherchez un chemin réaliste, sans repartir de zéro.</span><span lang="en">You’re aiming for finance, EPM or data and want a realistic path without starting from scratch.</span></span></li></ul>
+</div></section>
+<section><div class="wrap">
+  <div class="head"><h2><span lang="fr">Les sujets que l’on travaille</span><span lang="en">What we work on</span></h2><p></p></div>
+  <div class="ways ways-4"><div class="way"><h3><span lang="fr">CV, LinkedIn et entretiens</span><span lang="en">CV, LinkedIn and interviews</span></h3><p><span lang="fr">Un CV qui passe le tri en 30 secondes, un profil LinkedIn qui attire les recruteurs, et des réponses préparées aux questions techniques de contrôle de gestion.</span><span lang="en">A CV that passes the 30-second screen, a LinkedIn profile that attracts recruiters, and prepared answers to technical management control questions.</span></p></div><div class="way"><h3><span lang="fr">Devenir consultant EPM</span><span lang="en">Becoming an EPM consultant</span></h3><p><span lang="fr">Le métier au quotidien, les outils (Anaplan, Pigment), les certifications utiles et comment entrer dans un cabinet de conseil.</span><span lang="en">The day-to-day job, the tools (Anaplan, Pigment), the useful certifications and how to join a consulting firm.</span></p></div><div class="way"><h3><span lang="fr">Monter en compétences</span><span lang="en">Building your skills</span></h3><p><span lang="fr">Excel avancé, business intelligence, contrôle de gestion : quoi apprendre, dans quel ordre, avec quels exercices concrets.</span><span lang="en">Advanced Excel, business intelligence, management control: what to learn, in which order, with which hands-on exercises.</span></p></div><div class="way"><h3><span lang="fr">Choix de carrière, stages et premier emploi</span><span lang="en">Career choices, internships and first job</span></h3><p><span lang="fr">Audit, contrôle de gestion, finance d’entreprise, conseil : comparer les voies et choisir celle qui vous correspond.</span><span lang="en">Audit, management control, corporate finance, consulting: compare the paths and choose the one that fits you.</span></p></div></div>
+</div></section>
+<section class="alt"><div class="wrap">
+  <div class="head"><h2><span lang="fr">Formats et tarifs</span><span lang="en">Formats and rates</span></h2>
+    <p><span lang="fr">Prix de lancement, réservés aux premières personnes accompagnées.</span><span lang="en">Launch prices, reserved for the first people I mentor.</span></p></div>
+  <div class="mgrid">
+    <article class="course mcard">
       <div class="tag"><span lang="fr">Ponctuel</span><span lang="en">One-off</span></div>
       <h3><span lang="fr">Séance individuelle</span><span lang="en">Single session</span></h3>
-      <p><span lang="fr">Une heure en visio pour traiter une question précise : CV, préparation d’entretien, cas pratique ou choix de carrière.</span><span lang="en">One hour by video call on a specific topic: CV, interview prep, a case study or a career choice.</span></p>
-      <a class="btn btn-ghost" href="contact.html" data-booking="mentorat"><span lang="fr">Demander une séance</span><span lang="en">Request a session</span></a>
+      <p class="price">400 DH<span><span lang="fr"> / séance</span><span lang="en"> / session</span></span></p>
+      <p><span lang="fr">Une heure en visio pour traiter une question précise.</span><span lang="en">One hour by video call on a specific question.</span></p>
+      <ul class="incl"><li><span lang="fr">CV, LinkedIn, entretien, choix de carrière</span><span lang="en">CV, LinkedIn, interview, career choice</span></li><li><span lang="fr">Plan d’action écrit après la séance</span><span lang="en">Written action plan after the session</span></li></ul>
+      <a class="btn btn-solid" data-booking="mentorat" href="contact.html"><span lang="fr">Réserver une séance</span><span lang="en">Book a session</span></a>
     </article>
-    <article class="course">
+    <article class="course mcard">
+      <div class="tag"><span lang="fr">Programme</span><span lang="en">Programme</span></div>
+      <h3><span lang="fr">Décrocher son 1er poste</span><span lang="en">Land your first job</span></h3>
+      <p class="price">1 200 DH<span><span lang="fr"> / 4 semaines</span><span lang="en"> / 4 weeks</span></span></p>
+      <p><span lang="fr">Un programme intensif pour passer d’une recherche au hasard à une recherche ciblée.</span><span lang="en">An intensive programme to go from random applying to a targeted search.</span></p>
+      <ul class="incl"><li><span lang="fr">4 séances d’1h, une par semaine</span><span lang="en">4 one-hour sessions, one per week</span></li><li><span lang="fr">CV et LinkedIn corrigés par écrit</span><span lang="en">CV and LinkedIn corrected in writing</span></li><li><span lang="fr">Simulation d’entretien complète</span><span lang="en">Full mock interview</span></li><li><span lang="fr">Questions par message entre les séances</span><span lang="en">Questions by message between sessions</span></li></ul>
+      <a class="btn btn-solid" data-booking="appel-decouverte" href="contact.html"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
+    </article>
+    <article class="course mcard">
       <div class="tag"><span lang="fr">Suivi</span><span lang="en">Ongoing</span></div>
       <h3><span lang="fr">Accompagnement sur 3 mois</span><span lang="en">3-month programme</span></h3>
-      <p><span lang="fr">Une séance toutes les deux semaines, une feuille de route personnalisée, des exercices entre les séances et un échange par message.</span><span lang="en">A session every two weeks, a personal roadmap, exercises between sessions and messaging support.</span></p>
-      <a class="btn btn-ghost" href="contact.html"><span lang="fr">Démarrer l’accompagnement</span><span lang="en">Start the programme</span></a>
+      <p class="price">2 000 DH<span><span lang="fr"> / 3 mois</span><span lang="en"> / 3 months</span></span></p>
+      <p><span lang="fr">Pour progresser sur la durée : monter en compétences, préparer une évolution ou une reconversion.</span><span lang="en">To grow over time: build skills, prepare a promotion or a career change.</span></p>
+      <ul class="incl"><li><span lang="fr">6 séances d’1h, toutes les deux semaines</span><span lang="en">6 one-hour sessions, every two weeks</span></li><li><span lang="fr">Feuille de route personnalisée</span><span lang="en">Personal roadmap</span></li><li><span lang="fr">Exercices et cas pratiques entre les séances</span><span lang="en">Exercises and case studies between sessions</span></li><li><span lang="fr">Questions par message</span><span lang="en">Questions by message</span></li></ul>
+      <a class="btn btn-ghost" data-booking="appel-decouverte" href="contact.html"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
+    </article>
+    <article class="course mcard">
+      <div class="tag"><span lang="fr">En groupe</span><span lang="en">Group</span></div>
+      <h3><span lang="fr">Cercle de mentorat</span><span lang="en">Mentoring circle</span></h3>
+      <p class="price">600 DH<span><span lang="fr"> / personne</span><span lang="en"> / person</span></span></p>
+      <p><span lang="fr">4 à 6 personnes avec le même objectif, pour avancer ensemble et apprendre des questions des autres.</span><span lang="en">4 to 6 people with the same goal, moving forward together and learning from each other’s questions.</span></p>
+      <ul class="incl"><li><span lang="fr">4 séances de 1h30 sur 2 mois</span><span lang="en">4 sessions of 90 minutes over 2 months</span></li><li><span lang="fr">Un thème par séance : cible, CV, réseau, entretiens</span><span lang="en">One theme per session: target, CV, network, interviews</span></li><li><span lang="fr">Groupe d’entraide entre les séances</span><span lang="en">Peer support group between sessions</span></li></ul>
+      <form class="wl" data-course="Cercle de mentorat" novalidate><label class="sr">Email</label><input type="email" name="email" autocomplete="email" required data-ph-fr="Votre email" data-ph-en="Your email" placeholder="Votre email"><button class="btn btn-solid" type="submit"><span lang="fr">Rejoindre le prochain groupe</span><span lang="en">Join the next group</span></button><p class="wl-msg" aria-live="polite"></p></form>
     </article>
   </div>
 </div></section>
-<section><div class="wrap">
+<section><div class="wrap course-layout">
+  <div>
+    <h2><span lang="fr">Le programme « Décrocher son 1er poste »</span><span lang="en">The “Land your first job” programme</span></h2>
+    <ol class="modules"><li><h3><span lang="fr">Semaine 1 : clarifier votre cible</span><span lang="en">Week 1: clarify your target</span></h3><p><span lang="fr">Postes visés, secteurs, entreprises : on définit une cible précise et une liste de 20 entreprises.</span><span lang="en">Target roles, sectors, companies: we define a precise target and a list of 20 companies.</span></p></li><li><h3><span lang="fr">Semaine 2 : CV et LinkedIn</span><span lang="en">Week 2: CV and LinkedIn</span></h3><p><span lang="fr">Réécriture de votre CV et de votre profil LinkedIn, avec mes corrections écrites.</span><span lang="en">Rewriting your CV and LinkedIn profile, with my written corrections.</span></p></li><li><h3><span lang="fr">Semaine 3 : candidatures et réseau</span><span lang="en">Week 3: applications and network</span></h3><p><span lang="fr">Candidatures ciblées, messages aux recruteurs et aux anciens de votre école, suivi des relances.</span><span lang="en">Targeted applications, messages to recruiters and alumni, follow-up tracking.</span></p></li><li><h3><span lang="fr">Semaine 4 : entretiens</span><span lang="en">Week 4: interviews</span></h3><p><span lang="fr">Simulation d’entretien complète, questions techniques de contrôle de gestion et cas pratique.</span><span lang="en">Full mock interview, technical management control questions and a case study.</span></p></li></ol>
+  </div>
+  <aside class="aside">
+    <dl>
+      <dt><span lang="fr">Durée</span><span lang="en">Length</span></dt><dd><span lang="fr">4 semaines</span><span lang="en">4 weeks</span></dd>
+      <dt>Format</dt><dd><span lang="fr">4 séances d’1h en visio + échanges par message</span><span lang="en">4 one-hour video sessions + messaging</span></dd>
+      <dt><span lang="fr">Pour qui</span><span lang="en">For</span></dt><dd><span lang="fr">Étudiants en dernière année et jeunes diplômés</span><span lang="en">Final-year students and recent graduates</span></dd>
+      <dt><span lang="fr">Tarif de lancement</span><span lang="en">Launch price</span></dt><dd>1 200 DH</dd>
+    </dl>
+    <a class="btn btn-solid" data-booking="appel-decouverte" href="contact.html"><span lang="fr">Parlons de votre recherche</span><span lang="en">Let’s talk about your search</span></a>
+  </aside>
+</div></section>
+<section class="alt"><div class="wrap">
   <div class="head"><h2><span lang="fr">Comment ça se passe</span><span lang="en">How it works</span></h2><p></p></div>
   <div class="steps">
-    <div class="step"><span class="n">1</span><h3><span lang="fr">Premier échange</span><span lang="en">First chat</span></h3><p><span lang="fr">20 minutes offertes pour faire le point sur votre situation.</span><span lang="en">A free 20-minute chat about where you stand.</span></p></div>
-    <div class="step"><span class="n">2</span><h3><span lang="fr">Feuille de route</span><span lang="en">Roadmap</span></h3><p><span lang="fr">On fixe l’objectif et les étapes pour l’atteindre.</span><span lang="en">We set the goal and the steps to reach it.</span></p></div>
-    <div class="step"><span class="n">3</span><h3><span lang="fr">Séances et exercices</span><span lang="en">Sessions and practice</span></h3><p><span lang="fr">Des cas concrets, corrigés ensemble.</span><span lang="en">Real cases, reviewed together.</span></p></div>
-    <div class="step"><span class="n">4</span><h3><span lang="fr">Bilan</span><span lang="en">Review</span></h3><p><span lang="fr">On mesure le chemin parcouru et la suite à donner.</span><span lang="en">We look at progress made and what comes next.</span></p></div>
+    <div class="step"><span class="n">1</span><h3><span lang="fr">Appel découverte</span><span lang="en">Discovery call</span></h3><p><span lang="fr">30 minutes offertes pour comprendre votre situation et choisir le bon format.</span><span lang="en">A free 30-minute call to understand your situation and pick the right format.</span></p></div>
+    <div class="step"><span class="n">2</span><h3><span lang="fr">Objectif</span><span lang="en">Goal</span></h3><p><span lang="fr">On fixe un objectif mesurable : un poste, une compétence, une décision.</span><span lang="en">We set a measurable goal: a job, a skill, a decision.</span></p></div>
+    <div class="step"><span class="n">3</span><h3><span lang="fr">Séances et exercices</span><span lang="en">Sessions and practice</span></h3><p><span lang="fr">Du concret à chaque séance, et du travail entre deux.</span><span lang="en">Hands-on work in every session, and practice in between.</span></p></div>
+    <div class="step"><span class="n">4</span><h3><span lang="fr">Bilan</span><span lang="en">Review</span></h3><p><span lang="fr">On mesure le chemin parcouru et on décide de la suite.</span><span lang="en">We measure progress and decide what’s next.</span></p></div>
   </div>
+</div></section>
+<section><div class="wrap">
+  <div class="head"><h2><span lang="fr">Questions fréquentes</span><span lang="en">Frequently asked questions</span></h2><p></p></div>
+  <div class="faq"><details><summary><span lang="fr">Les séances se font-elles à distance ?</span><span lang="en">Are sessions held remotely?</span></summary><p><span lang="fr">Oui, en visio. Vous recevez le lien au moment de la réservation.</span><span lang="en">Yes, by video call. You receive the link when you book.</span></p></details><details><summary><span lang="fr">En quelle langue ?</span><span lang="en">In which language?</span></summary><p><span lang="fr">En français, en darija ou en anglais, selon votre préférence.</span><span lang="en">In French, Darija or English, as you prefer.</span></p></details><details><summary><span lang="fr">Garantissez-vous un emploi ?</span><span lang="en">Do you guarantee a job?</span></summary><p><span lang="fr">Non, et personne ne peut le garantir honnêtement. Je vous garantis une méthode claire, des documents solides et une vraie préparation aux entretiens.</span><span lang="en">No, and nobody can honestly guarantee that. I guarantee a clear method, strong documents and real interview preparation.</span></p></details><details><summary><span lang="fr">Quel format choisir ?</span><span lang="en">Which format should I choose?</span></summary><p><span lang="fr">Une question précise : la séance individuelle. Une recherche d’emploi active : le programme de 4 semaines. Un objectif de progression sur la durée : l’accompagnement de 3 mois. En cas de doute, l’appel découverte est gratuit.</span><span lang="en">A specific question: the single session. An active job search: the 4-week programme. A longer-term growth goal: the 3-month programme. Unsure? The discovery call is free.</span></p></details><details><summary><span lang="fr">Pourquoi des prix de lancement ?</span><span lang="en">Why launch prices?</span></summary><p><span lang="fr">Ces tarifs s’appliquent aux premières personnes accompagnées, en échange d’un retour honnête sur l’expérience. Ils augmenteront ensuite.</span><span lang="en">These rates apply to the first people I mentor, in exchange for honest feedback on the experience. They will go up afterwards.</span></p></details></div>
 </div></section><section class="band alt"><div class="wrap">
   <h2><span lang="fr">Un projet, une question ? Prenons 30 minutes.</span><span lang="en">A project or a question? Let’s take 30 minutes.</span></h2>
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
