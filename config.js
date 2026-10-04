@@ -12,7 +12,7 @@ window.SITE_CONFIG = {
 
   // Réseaux sociaux (ex : "https://www.linkedin.com/in/ton-profil")
   linkedin: "https://www.linkedin.com/in/serrou-mohammed",
-  youtube: "",
+  youtube: "https://www.youtube.com/@serrou_mohammed",
   instagram: "",
   tiktok: ""
 };
