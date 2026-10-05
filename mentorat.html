@@ -306,6 +306,35 @@ footer a:hover{color:var(--accent)}
 @media (max-width:1100px){.mgrid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:700px){.mgrid{grid-template-columns:1fr}}
 
+.tmap{display:block;width:100%;height:auto;max-width:1000px;margin:0 auto 40px}
+.tsteps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px}
+.tstep{border-top:1px solid var(--line);padding-top:16px}
+.tstep .tn{font-family:var(--serif);font-size:30px;color:var(--accent);line-height:1}
+.tstep h3{font-size:21px;margin:8px 0 6px}
+.tstep p{margin:0;color:var(--ink-2);font-size:15px}
+.tscore{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.tscore h2{margin-bottom:16px}
+.tscore .lead2{color:var(--ink-2);margin:0 0 20px;max-width:36em}
+.radarbox{display:flex;justify-content:center}
+.radar{width:100%;max-width:360px;height:auto}
+@media (max-width:960px){.tsteps{grid-template-columns:1fr 1fr}.tscore{grid-template-columns:1fr}}
+@media (max-width:600px){.tsteps{grid-template-columns:1fr}}
+
+.aside .aprice{font-family:var(--serif);font-size:40px;line-height:1.1;color:var(--accent);margin:0}
+.aside .aprice span{display:block;font-family:var(--sans);font-size:14px;color:var(--ink-2);margin-top:4px}
+.aside .anote{font-size:13px;color:var(--ink-2);margin:6px 0 18px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.aside .anote2{font-size:13.5px;color:var(--ink-2);margin:12px 0 0}
+.aside .btn{display:block;text-align:center}
+.mcard .price span{display:block;margin-top:2px}
+.mcard h3 a{color:inherit;text-decoration:none}
+.mcard h3 a:hover{color:var(--accent)}
+.mcard .more{display:inline-block;margin:0 0 18px;font-size:15px;font-weight:500;color:var(--accent)}
+
+.proof2{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:44px 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.proof2 .pt{margin:0 0 6px;font-family:var(--serif);font-size:18px;line-height:1.25;color:var(--accent)}
+.proof2 .pd{margin:0;font-size:14px;line-height:1.5;color:var(--ink-2)}
+@media (max-width:700px){.proof2{grid-template-columns:1fr;gap:18px}}
+
 .menu-btn{display:none;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 14px var(--sans);padding:7px 12px;border-radius:6px;cursor:pointer}
 .menu-btn .bars{width:16px;height:10px;position:relative;display:inline-block;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor}
 .menu-btn .bars::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1.5px solid currentColor;transform:translateY(-50%)}
@@ -332,7 +361,7 @@ nav{gap:20px}
   <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr" aria-pressed="true">FR</button><button type="button" data-set="en" aria-pressed="false">EN</button></div>
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
 </div></header><main><div class="page-head"><div class="wrap">
-  <h1><span lang="fr">Mentorat finance, contrôle de gestion et EPM</span><span lang="en">Mentoring in finance, management control and EPM</span></h1>
+  <div class="tag ctag">Programme Trajectoire</div><h1><span lang="fr">Le mentorat pour réussir en finance, contrôle de gestion et EPM</span><span lang="en">Mentoring to succeed in finance, management control and EPM</span></h1>
   <p class="lede"><span lang="fr">Un accompagnement concret pour décrocher votre premier poste, progresser en contrôle de gestion ou réussir votre reconversion vers la finance, l’EPM ou la data.</span><span lang="en">Hands-on guidance to land your first job, grow in management control, or switch careers into finance, EPM or data.</span></p>
 </div></div>
 <section><div class="wrap about">
@@ -351,6 +380,28 @@ nav{gap:20px}
   </div>
 </div></section>
 <section class="alt"><div class="wrap">
+  <div class="head"><h2><span lang="fr">La méthode Trajectoire</span><span lang="en">The Trajectoire method</span></h2>
+    <p><span lang="fr">Six étapes, dans l’ordre où se construit une recherche réussie. Chaque séance fait avancer d’une étape.</span><span lang="en">Six stages, in the order a successful search is built. Each session moves you one stage forward.</span></p></div>
+  <img class="tmap" src="trajectoire-etapes.png" width="1200" height="490" alt="Les 6 étapes du Programme Trajectoire : Point de départ, Cap, Bagage, Approche, Épreuves, Arrivée">
+  <div class="tsteps"><div class="tstep"><span class="tn">1</span><h3><span lang="fr">Point de départ</span><span lang="en">Starting point</span></h3><p><span lang="fr">Diagnostic et score de préparation</span><span lang="en">Diagnosis and readiness score</span></p></div><div class="tstep"><span class="tn">2</span><h3><span lang="fr">Cap</span><span lang="en">Direction</span></h3><p><span lang="fr">Postes, secteurs et 20 entreprises cibles</span><span lang="en">Roles, sectors and 20 target companies</span></p></div><div class="tstep"><span class="tn">3</span><h3><span lang="fr">Bagage</span><span lang="en">Toolkit</span></h3><p><span lang="fr">CV et LinkedIn qui passent le tri</span><span lang="en">A CV and LinkedIn that pass screening</span></p></div><div class="tstep"><span class="tn">4</span><h3><span lang="fr">Approche</span><span lang="en">Approach</span></h3><p><span lang="fr">Candidatures ciblées et réseau</span><span lang="en">Targeted applications and network</span></p></div><div class="tstep"><span class="tn">5</span><h3><span lang="fr">Épreuves</span><span lang="en">Tests</span></h3><p><span lang="fr">Simulations d’entretien et test Excel</span><span lang="en">Mock interviews and Excel test</span></p></div><div class="tstep"><span class="tn">6</span><h3><span lang="fr">Arrivée</span><span lang="en">Arrival</span></h3><p><span lang="fr">Bilan, score final et plan des 90 premiers jours</span><span lang="en">Review, final score and first-90-days plan</span></p></div></div>
+</div></section>
+<section><div class="wrap tscore">
+  <div>
+    <h2><span lang="fr">Une progression mesurée</span><span lang="en">Measured progress</span></h2>
+    <p class="lead2"><span lang="fr">Au début et à la fin du programme, vous remplissez le score de préparation Trajectoire : 24 affirmations sur 6 dimensions, un score sur 100 et un radar qui montre exactement le chemin parcouru.</span><span lang="en">At the start and end of the programme, you complete the Trajectoire readiness score: 24 statements across 6 dimensions, a score out of 100 and a radar chart showing exactly how far you’ve come.</span></p>
+    <ul class="facts">
+      <li><span>0 à 39</span><span><span lang="fr">Au sol : les bases sont à construire</span><span lang="en">On the ground: foundations to build</span></span></li>
+      <li><span>40 à 69</span><span><span lang="fr">En montée : la direction est bonne</span><span lang="en">Climbing: right direction</span></span></li>
+      <li><span>70 à 100</span><span><span lang="fr">Altitude de croisière : prêt pour les recrutements</span><span lang="en">Cruising altitude: ready for recruiters</span></span></li>
+    </ul>
+  </div>
+  <div class="radarbox"><svg class="radar" viewBox="0 0 300 312" role="img" aria-label="Exemple de score de préparation : début et fin de programme"><polygon points="150.0,112.5 173.8,126.2 173.8,153.8 150.0,167.5 126.2,153.8 126.2,126.2" fill="none" stroke="var(--line)" stroke-width="1"/><polygon points="150.0,85.0 197.6,112.5 197.6,167.5 150.0,195.0 102.4,167.5 102.4,112.5" fill="none" stroke="var(--line)" stroke-width="1"/><polygon points="150.0,57.5 221.4,98.8 221.4,181.2 150.0,222.5 78.6,181.3 78.6,98.8" fill="none" stroke="var(--line)" stroke-width="1"/><polygon points="150.0,30.0 245.3,85.0 245.3,195.0 150.0,250.0 54.7,195.0 54.7,85.0" fill="none" stroke="var(--line)" stroke-width="1"/><line x1="150" y1="140" x2="150.0" y2="30.0" stroke="var(--line)"/><line x1="150" y1="140" x2="245.3" y2="85.0" stroke="var(--line)"/><line x1="150" y1="140" x2="245.3" y2="195.0" stroke="var(--line)"/><line x1="150" y1="140" x2="150.0" y2="250.0" stroke="var(--line)"/><line x1="150" y1="140" x2="54.7" y2="195.0" stroke="var(--line)"/><line x1="150" y1="140" x2="54.7" y2="85.0" stroke="var(--line)"/><polygon points="150.0,101.5 192.9,115.2 178.6,156.5 150.0,167.5 121.4,156.5 111.9,118.0" fill="var(--accent)" fill-opacity=".12" stroke="#D9B8C2" stroke-width="2"/><polygon points="150.0,46.5 235.7,90.5 226.2,184.0 150.0,217.0 78.6,181.3 73.8,96.0" fill="var(--accent)" fill-opacity=".18" stroke="var(--accent)" stroke-width="2.5"/><text x="150.0" y="12.0" text-anchor="middle" font-size="11" fill="var(--ink-2)">Cap</text><text x="264.3" y="78.0" text-anchor="middle" font-size="11" fill="var(--ink-2)">CV</text><text x="264.3" y="210.0" text-anchor="middle" font-size="11" fill="var(--ink-2)">LinkedIn</text><text x="150.0" y="276.0" text-anchor="middle" font-size="11" fill="var(--ink-2)">Réseau</text><text x="35.7" y="210.0" text-anchor="middle" font-size="11" fill="var(--ink-2)">Entretien</text><text x="35.7" y="78.0" text-anchor="middle" font-size="11" fill="var(--ink-2)">Technique</text><g font-size="11" fill="var(--ink-2)"><rect x="70" y="300" width="10" height="3" fill="#D9B8C2"/><text x="85" y="305">Début</text><rect x="150" y="300" width="10" height="3" fill="var(--accent)"/><text x="165" y="305">Fin</text></g></svg></div>
+</div></section>
+<section class="alt"><div class="wrap">
+  <div class="head"><h2><span lang="fr">Ce que vous recevez</span><span lang="en">What you receive</span></h2><p><span lang="fr">Dans les programmes Décrocher son 1er poste, Accompagnement 3 mois et Cercle de mentorat.</span><span lang="en">In the Land your first job, 3-month and Mentoring circle programmes.</span></p></div>
+  <ul class="who"><li><strong><span lang="fr">Le livret du mentoré</span><span lang="en">The mentee handbook</span></strong><span class="d"><span lang="fr">Un livret de 16 pages qui suit les 6 étapes : exercices, modèles de CV, messages types, préparation aux entretiens.</span><span lang="en">A 16-page handbook following the 6 stages: exercises, CV templates, message templates, interview preparation.</span></span></li><li><strong><span lang="fr">Les outils Excel Trajectoire</span><span lang="en">The Trajectoire Excel tools</span></strong><span class="d"><span lang="fr">Score de préparation, cible de 20 entreprises, suivi des candidatures avec relances automatiques, tableau de bord.</span><span lang="en">Readiness score, 20-company target list, application tracker with automatic reminders, dashboard.</span></span></li><li><strong><span lang="fr">Un test Excel de recrutement</span><span lang="en">A recruitment Excel test</span></strong><span class="d"><span lang="fr">Le type de test que font passer les recruteurs en finance, chronométré, corrigé en séance.</span><span lang="en">The kind of test finance recruiters use, timed and reviewed in session.</span></span></li><li><strong><span lang="fr">Un plan d’action après chaque séance</span><span lang="en">An action plan after every session</span></strong><span class="d"><span lang="fr">Vos 3 prochaines actions et leurs échéances, envoyées sous 48 heures.</span><span lang="en">Your next 3 actions and deadlines, sent within 48 hours.</span></span></li><li><strong><span lang="fr">Le module « Devenir consultant EPM »</span><span lang="en">The “Becoming an EPM consultant” module</span></strong><span class="d"><span lang="fr">Le métier, les outils comme Anaplan et Pigment, les certifications, et un exercice de modélisation.</span><span lang="en">The job, tools such as Anaplan and Pigment, certifications, and a modelling exercise.</span></span></li></ul>
+</div></section>
+<section ><div class="wrap">
   <div class="head"><h2><span lang="fr">Pour qui</span><span lang="en">Who it’s for</span></h2><p></p></div>
   <ul class="who"><li><strong><span lang="fr">Étudiants en école de commerce</span><span lang="en">Business school students</span></strong><span class="d"><span lang="fr">ENCG, ISCAE ou université : vous préparez un stage ou votre premier poste et voulez savoir ce que les recruteurs attendent vraiment.</span><span lang="en">ENCG, ISCAE or university: you’re preparing an internship or first job and want to know what recruiters really expect.</span></span></li><li><strong><span lang="fr">Jeunes diplômés en recherche d’emploi</span><span lang="en">Recent graduates looking for a job</span></strong><span class="d"><span lang="fr">Vous envoyez des candidatures sans réponse. On revoit votre cible, votre CV, votre LinkedIn et votre façon de postuler.</span><span lang="en">Your applications go unanswered. We rework your target, CV, LinkedIn and how you apply.</span></span></li><li><strong><span lang="fr">Contrôleurs de gestion juniors (0 à 3 ans)</span><span lang="en">Junior controllers (0 to 3 years)</span></strong><span class="d"><span lang="fr">Vous êtes en poste et voulez gagner en méthode, en outils et en assurance face aux opérationnels.</span><span lang="en">You’re in the job and want more method, better tools and more confidence with operational teams.</span></span></li><li><strong><span lang="fr">Personnes en reconversion</span><span lang="en">Career changers</span></strong><span class="d"><span lang="fr">Vous visez la finance, l’EPM ou la data et cherchez un chemin réaliste, sans repartir de zéro.</span><span lang="en">You’re aiming for finance, EPM or data and want a realistic path without starting from scratch.</span></span></li></ul>
 </div></section>
@@ -364,34 +415,34 @@ nav{gap:20px}
   <div class="mgrid">
     <article class="course mcard">
       <div class="tag"><span lang="fr">Ponctuel</span><span lang="en">One-off</span></div>
-      <h3><span lang="fr">Séance individuelle</span><span lang="en">Single session</span></h3>
+      <h3><a href="mentorat-seance-individuelle.html"><span lang="fr">Séance individuelle</span><span lang="en">Single session</span></a></h3>
       <p class="price">400 DH<span><span lang="fr"> / séance</span><span lang="en"> / session</span></span></p>
       <p><span lang="fr">Une heure en visio pour traiter une question précise.</span><span lang="en">One hour by video call on a specific question.</span></p>
-      <ul class="incl"><li><span lang="fr">CV, LinkedIn, entretien, choix de carrière</span><span lang="en">CV, LinkedIn, interview, career choice</span></li><li><span lang="fr">Plan d’action écrit après la séance</span><span lang="en">Written action plan after the session</span></li></ul>
+      <a class="more" href="mentorat-seance-individuelle.html"><span lang="fr">Voir le programme détaillé</span><span lang="en">See the full programme</span></a><ul class="incl"><li><span lang="fr">CV, LinkedIn, entretien, choix de carrière</span><span lang="en">CV, LinkedIn, interview, career choice</span></li><li><span lang="fr">Plan d’action écrit après la séance</span><span lang="en">Written action plan after the session</span></li></ul>
       <a class="btn btn-solid" data-booking="mentorat" href="contact.html"><span lang="fr">Réserver une séance</span><span lang="en">Book a session</span></a>
     </article>
     <article class="course mcard">
       <div class="tag"><span lang="fr">Programme</span><span lang="en">Programme</span></div>
-      <h3><span lang="fr">Décrocher son 1er poste</span><span lang="en">Land your first job</span></h3>
+      <h3><a href="mentorat-premier-poste.html"><span lang="fr">Décrocher son 1er poste</span><span lang="en">Land your first job</span></a></h3>
       <p class="price">1 200 DH<span><span lang="fr"> / 4 semaines</span><span lang="en"> / 4 weeks</span></span></p>
       <p><span lang="fr">Un programme intensif pour passer d’une recherche au hasard à une recherche ciblée.</span><span lang="en">An intensive programme to go from random applying to a targeted search.</span></p>
-      <ul class="incl"><li><span lang="fr">4 séances d’1h, une par semaine</span><span lang="en">4 one-hour sessions, one per week</span></li><li><span lang="fr">CV et LinkedIn corrigés par écrit</span><span lang="en">CV and LinkedIn corrected in writing</span></li><li><span lang="fr">Simulation d’entretien complète</span><span lang="en">Full mock interview</span></li><li><span lang="fr">Questions par message entre les séances</span><span lang="en">Questions by message between sessions</span></li></ul>
+      <a class="more" href="mentorat-premier-poste.html"><span lang="fr">Voir le programme détaillé</span><span lang="en">See the full programme</span></a><ul class="incl"><li><span lang="fr">4 séances d’1h, une par semaine</span><span lang="en">4 one-hour sessions, one per week</span></li><li><span lang="fr">CV et LinkedIn corrigés par écrit</span><span lang="en">CV and LinkedIn corrected in writing</span></li><li><span lang="fr">Simulation d’entretien complète</span><span lang="en">Full mock interview</span></li><li><span lang="fr">Questions par message entre les séances</span><span lang="en">Questions by message between sessions</span></li></ul>
       <a class="btn btn-solid" data-booking="appel-decouverte" href="contact.html"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
     </article>
     <article class="course mcard">
       <div class="tag"><span lang="fr">Suivi</span><span lang="en">Ongoing</span></div>
-      <h3><span lang="fr">Accompagnement sur 3 mois</span><span lang="en">3-month programme</span></h3>
+      <h3><a href="mentorat-accompagnement-3-mois.html"><span lang="fr">Accompagnement sur 3 mois</span><span lang="en">3-month programme</span></a></h3>
       <p class="price">2 000 DH<span><span lang="fr"> / 3 mois</span><span lang="en"> / 3 months</span></span></p>
       <p><span lang="fr">Pour progresser sur la durée : monter en compétences, préparer une évolution ou une reconversion.</span><span lang="en">To grow over time: build skills, prepare a promotion or a career change.</span></p>
-      <ul class="incl"><li><span lang="fr">6 séances d’1h, toutes les deux semaines</span><span lang="en">6 one-hour sessions, every two weeks</span></li><li><span lang="fr">Feuille de route personnalisée</span><span lang="en">Personal roadmap</span></li><li><span lang="fr">Exercices et cas pratiques entre les séances</span><span lang="en">Exercises and case studies between sessions</span></li><li><span lang="fr">Questions par message</span><span lang="en">Questions by message</span></li></ul>
+      <a class="more" href="mentorat-accompagnement-3-mois.html"><span lang="fr">Voir le programme détaillé</span><span lang="en">See the full programme</span></a><ul class="incl"><li><span lang="fr">6 séances d’1h, toutes les deux semaines</span><span lang="en">6 one-hour sessions, every two weeks</span></li><li><span lang="fr">Feuille de route personnalisée</span><span lang="en">Personal roadmap</span></li><li><span lang="fr">Exercices et cas pratiques entre les séances</span><span lang="en">Exercises and case studies between sessions</span></li><li><span lang="fr">Questions par message</span><span lang="en">Questions by message</span></li></ul>
       <a class="btn btn-ghost" data-booking="appel-decouverte" href="contact.html"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
     </article>
     <article class="course mcard">
       <div class="tag"><span lang="fr">En groupe</span><span lang="en">Group</span></div>
-      <h3><span lang="fr">Cercle de mentorat</span><span lang="en">Mentoring circle</span></h3>
+      <h3><a href="mentorat-cercle.html"><span lang="fr">Cercle de mentorat</span><span lang="en">Mentoring circle</span></a></h3>
       <p class="price">600 DH<span><span lang="fr"> / personne</span><span lang="en"> / person</span></span></p>
       <p><span lang="fr">4 à 6 personnes avec le même objectif, pour avancer ensemble et apprendre des questions des autres.</span><span lang="en">4 to 6 people with the same goal, moving forward together and learning from each other’s questions.</span></p>
-      <ul class="incl"><li><span lang="fr">4 séances de 1h30 sur 2 mois</span><span lang="en">4 sessions of 90 minutes over 2 months</span></li><li><span lang="fr">Un thème par séance : cible, CV, réseau, entretiens</span><span lang="en">One theme per session: target, CV, network, interviews</span></li><li><span lang="fr">Groupe d’entraide entre les séances</span><span lang="en">Peer support group between sessions</span></li></ul>
+      <a class="more" href="mentorat-cercle.html"><span lang="fr">Voir le programme détaillé</span><span lang="en">See the full programme</span></a><ul class="incl"><li><span lang="fr">4 séances de 1h30 sur 2 mois</span><span lang="en">4 sessions of 90 minutes over 2 months</span></li><li><span lang="fr">Un thème par séance : cible, CV, réseau, entretiens</span><span lang="en">One theme per session: target, CV, network, interviews</span></li><li><span lang="fr">Groupe d’entraide entre les séances</span><span lang="en">Peer support group between sessions</span></li></ul>
       <form class="wl" data-course="Cercle de mentorat" novalidate><input type="text" name="_gotcha" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="sr">Email</label><input type="email" name="email" autocomplete="email" required data-ph-fr="Votre email" data-ph-en="Your email" placeholder="Votre email"><button class="btn btn-solid" type="submit"><span lang="fr">Rejoindre le prochain groupe</span><span lang="en">Join the next group</span></button><p class="wl-msg" aria-live="polite"></p></form>
     </article>
   </div>

@@ -1,7 +1,10 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "framework": null,
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/((?!admin).*)",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -30,6 +33,31 @@
         {
           "key": "Cross-Origin-Opener-Policy",
           "value": "same-origin"
+        }
+      ]
+    },
+    {
+      "source": "/admin(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' blob: data: https://*; media-src blob:; frame-src blob:; worker-src blob:; manifest-src blob:; connect-src 'self' blob: data: https://unpkg.com https://api.github.com https://www.githubstatus.com https://*.githubusercontent.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains"
         }
       ]
     }

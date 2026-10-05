@@ -1,0 +1,6 @@
+{
+  "name": "site-mohammed-serrou",
+  "private": true,
+  "scripts": { "build": "node build-blog.js" },
+  "dependencies": { "marked": "^18.0.0", "js-yaml": "^4.1.0" }
+}

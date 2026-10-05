@@ -306,6 +306,35 @@ footer a:hover{color:var(--accent)}
 @media (max-width:1100px){.mgrid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:700px){.mgrid{grid-template-columns:1fr}}
 
+.tmap{display:block;width:100%;height:auto;max-width:1000px;margin:0 auto 40px}
+.tsteps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px}
+.tstep{border-top:1px solid var(--line);padding-top:16px}
+.tstep .tn{font-family:var(--serif);font-size:30px;color:var(--accent);line-height:1}
+.tstep h3{font-size:21px;margin:8px 0 6px}
+.tstep p{margin:0;color:var(--ink-2);font-size:15px}
+.tscore{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.tscore h2{margin-bottom:16px}
+.tscore .lead2{color:var(--ink-2);margin:0 0 20px;max-width:36em}
+.radarbox{display:flex;justify-content:center}
+.radar{width:100%;max-width:360px;height:auto}
+@media (max-width:960px){.tsteps{grid-template-columns:1fr 1fr}.tscore{grid-template-columns:1fr}}
+@media (max-width:600px){.tsteps{grid-template-columns:1fr}}
+
+.aside .aprice{font-family:var(--serif);font-size:40px;line-height:1.1;color:var(--accent);margin:0}
+.aside .aprice span{display:block;font-family:var(--sans);font-size:14px;color:var(--ink-2);margin-top:4px}
+.aside .anote{font-size:13px;color:var(--ink-2);margin:6px 0 18px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.aside .anote2{font-size:13.5px;color:var(--ink-2);margin:12px 0 0}
+.aside .btn{display:block;text-align:center}
+.mcard .price span{display:block;margin-top:2px}
+.mcard h3 a{color:inherit;text-decoration:none}
+.mcard h3 a:hover{color:var(--accent)}
+.mcard .more{display:inline-block;margin:0 0 18px;font-size:15px;font-weight:500;color:var(--accent)}
+
+.proof2{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:44px 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.proof2 .pt{margin:0 0 6px;font-family:var(--serif);font-size:18px;line-height:1.25;color:var(--accent)}
+.proof2 .pd{margin:0;font-size:14px;line-height:1.5;color:var(--ink-2)}
+@media (max-width:700px){.proof2{grid-template-columns:1fr;gap:18px}}
+
 .menu-btn{display:none;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 14px var(--sans);padding:7px 12px;border-radius:6px;cursor:pointer}
 .menu-btn .bars{width:16px;height:10px;position:relative;display:inline-block;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor}
 .menu-btn .bars::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1.5px solid currentColor;transform:translateY(-50%)}
@@ -347,10 +376,11 @@ nav{gap:20px}
         <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
         <a class="btn btn-ghost" href="formations.html"><span lang="fr">Voir les formations</span><span lang="en">See the courses</span></a>
       </div>
-      <p class="creds">
-        <span lang="fr">Diplômé de l’ENCG Kénitra, consultant en pilotage de la performance, certifié Anaplan et Pigment.</span>
-        <span lang="en">ENCG Kénitra graduate, performance management consultant, Anaplan and Pigment certified.</span>
-      </p>
+      <div class="proof2">
+  <div><p class="pt"><span lang="fr">Consultant EPM</span><span lang="en">EPM consultant</span></p><p class="pd"><span lang="fr">Planification et reporting pour des directions financières</span><span lang="en">Planning and reporting for finance departments</span></p></div>
+  <div><p class="pt"><span lang="fr">Certifié Anaplan &amp; Pigment</span><span lang="en">Anaplan &amp; Pigment certified</span></p><p class="pd"><span lang="fr">Les outils de planification des grandes entreprises</span><span lang="en">The planning tools of large companies</span></p></div>
+  <div><p class="pt"><span lang="fr">Formateur</span><span lang="en">Trainer</span></p><p class="pd"><span lang="fr">Consultants juniors et formations en finance</span><span lang="en">Junior consultants and finance courses</span></p></div>
+</div>
     </div>
 
     <svg class="chart" viewBox="0 0 520 440" role="img" aria-label="Illustration : comparaison budget et réel sur six mois">
@@ -408,7 +438,7 @@ nav{gap:20px}
     </a>
     <a class="way" href="mentorat.html">
       <h3><span lang="fr">Vous voulez être accompagné</span><span lang="en">You want guidance</span></h3>
-      <p><span lang="fr">Un mentorat individuel pour décrocher un poste, progresser ou réussir une reconversion.</span><span lang="en">One-to-one mentoring to land a role, grow, or switch careers.</span></p>
+      <p><span lang="fr">Le Programme Trajectoire : un mentorat en 6 étapes pour décrocher un poste, progresser ou réussir une reconversion.</span><span lang="en">The Trajectoire programme: 6-stage mentoring to land a role, grow, or switch careers.</span></p>
       <span class="more"><span lang="fr">Découvrir le mentorat</span><span lang="en">Discover mentoring</span></span>
     </a>
   </div>
