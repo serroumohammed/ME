@@ -392,7 +392,7 @@ nav{gap:20px}
       <p class="price">600 DH<span><span lang="fr"> / personne</span><span lang="en"> / person</span></span></p>
       <p><span lang="fr">4 à 6 personnes avec le même objectif, pour avancer ensemble et apprendre des questions des autres.</span><span lang="en">4 to 6 people with the same goal, moving forward together and learning from each other’s questions.</span></p>
       <ul class="incl"><li><span lang="fr">4 séances de 1h30 sur 2 mois</span><span lang="en">4 sessions of 90 minutes over 2 months</span></li><li><span lang="fr">Un thème par séance : cible, CV, réseau, entretiens</span><span lang="en">One theme per session: target, CV, network, interviews</span></li><li><span lang="fr">Groupe d’entraide entre les séances</span><span lang="en">Peer support group between sessions</span></li></ul>
-      <form class="wl" data-course="Cercle de mentorat" novalidate><label class="sr">Email</label><input type="email" name="email" autocomplete="email" required data-ph-fr="Votre email" data-ph-en="Your email" placeholder="Votre email"><button class="btn btn-solid" type="submit"><span lang="fr">Rejoindre le prochain groupe</span><span lang="en">Join the next group</span></button><p class="wl-msg" aria-live="polite"></p></form>
+      <form class="wl" data-course="Cercle de mentorat" novalidate><input type="text" name="_gotcha" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="sr">Email</label><input type="email" name="email" autocomplete="email" required data-ph-fr="Votre email" data-ph-en="Your email" placeholder="Votre email"><button class="btn btn-solid" type="submit"><span lang="fr">Rejoindre le prochain groupe</span><span lang="en">Join the next group</span></button><p class="wl-msg" aria-live="polite"></p></form>
     </article>
   </div>
 </div></section>
@@ -435,58 +435,4 @@ nav{gap:20px}
     <a data-social="tiktok" hidden target="_blank" rel="noopener">TikTok</a>
     <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
   </span>
-</div></footer><script>(function(){
-  var C=window.SITE_CONFIG||{}, root=document.documentElement, btns=document.querySelectorAll('.lang button');
-  function isEn(){return root.getAttribute('data-lang')==='en';}
-  function setLang(l){root.setAttribute('data-lang',l);root.setAttribute('lang',l);
-    btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false');});
-    document.querySelectorAll('[data-ph-fr]').forEach(function(i){i.placeholder=i.getAttribute('data-ph-'+l);});
-    try{localStorage.setItem('ms-lang',l);}catch(e){}}
-  var saved=null;try{saved=localStorage.getItem('ms-lang');}catch(e){}
-  setLang(saved==='en'?'en':'fr');
-  btns.forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set);});});
-  // booking link
-  if(C.bookingUrl){
-    document.querySelectorAll('[data-booking]').forEach(function(a){a.href=C.bookingUrl.replace(/\/$/,'')+(a.dataset.booking?'/'+a.dataset.booking:'');a.target='_blank';a.rel='noopener';});
-    document.querySelectorAll('[data-booking-block]').forEach(function(b){b.hidden=false;});
-  }
-  // social links
-  document.querySelectorAll('[data-social]').forEach(function(a){var u=C[a.dataset.social];if(u){a.href=u;a.hidden=false;}});
-  function send(data,onOk,onErr){
-    fetch(C.formEndpoint,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(data)})
-      .then(function(r){r.ok?onOk():onErr();}).catch(onErr);
-  }
-  // waitlist forms
-  document.querySelectorAll('form.wl').forEach(function(f){
-    var msg=f.querySelector('.wl-msg'), inp=f.querySelector('input');
-    f.addEventListener('submit',function(e){e.preventDefault();
-      if(!inp.value.trim()||!inp.checkValidity()){msg.textContent=isEn()?'Enter a valid email address.':'Saisissez une adresse email valide.';inp.focus();return;}
-      var course=f.dataset.course;
-      if(!C.formEndpoint){window.location.href='mailto:contact@serroumohammed.com?subject='+encodeURIComponent('Liste d’attente : '+course)+'&body='+encodeURIComponent('Email : '+inp.value.trim());return;}
-      msg.textContent=isEn()?'Sending…':'Envoi…';
-      send({type:'Liste d’attente',formation:course,email:inp.value.trim()},
-        function(){f.reset();msg.textContent=isEn()?'Done. You’ll be notified when enrolment opens.':'C’est noté. Vous serez prévenu à l’ouverture des inscriptions.';},
-        function(){msg.textContent=isEn()?'Sending failed. Write to contact@serroumohammed.com.':'L’envoi a échoué. Écrivez à contact@serroumohammed.com.';});
-    });
-  });
-  // contact form
-  var f=document.getElementById('contactForm');
-  if(f){var hint=document.getElementById('formHint'), sub=f.querySelector('button[type=submit]');
-    f.addEventListener('submit',function(e){e.preventDefault();
-      if(!f.name.value.trim()||!f.email.value.trim()||!f.email.checkValidity()){
-        hint.textContent=isEn()?'Add your name and a valid email address to send the request.':'Indiquez votre nom et une adresse email valide pour envoyer la demande.';
-        (f.name.value.trim()?f.email:f.name).focus();return;}
-      var d={type:'Contact',nom:f.name.value.trim(),email:f.email.value.trim(),besoin:f.need.value,message:f.msg.value.trim()};
-      if(!C.formEndpoint){
-        window.location.href='mailto:contact@serroumohammed.com?subject='+encodeURIComponent('Demande : '+d.besoin+' — '+d.nom)+'&body='+encodeURIComponent('Nom : '+d.nom+'\nEmail : '+d.email+'\nBesoin : '+d.besoin+'\n\n'+d.message);return;}
-      sub.disabled=true;hint.textContent=isEn()?'Sending…':'Envoi…';
-      send(d,function(){f.reset();sub.disabled=false;hint.textContent=isEn()?'Request sent. I’ll reply within 48 hours.':'Demande envoyée. Je vous réponds sous 48 heures.';},
-        function(){sub.disabled=false;hint.textContent=isEn()?'Sending failed. Write to contact@serroumohammed.com.':'L’envoi a échoué. Écrivez directement à contact@serroumohammed.com.';});
-    });}
-})();</script><a class="wa" href="https://wa.me/212609216678?text=Bonjour%20Mohammed%2C%20je%20viens%20de%20votre%20site." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 4.8 4.9-1.3A9.8 9.8 0 1 0 12 2.2zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.4z"/></svg></a><script>
-(function(){var b=document.querySelector('.menu-btn'),n=document.getElementById('mainnav');if(!b||!n)return;
-function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');}
-b.addEventListener('click',function(){set(!n.classList.contains('open'));});
-n.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
-window.addEventListener('hashchange',function(){set(false);});})();</script></body></html>
+</div></footer><a class="wa" href="https://wa.me/212609216678?text=Bonjour%20Mohammed%2C%20je%20viens%20de%20votre%20site." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 4.8 4.9-1.3A9.8 9.8 0 1 0 12 2.2zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.4z"/></svg></a><script src="site.js"></script></body></html>
