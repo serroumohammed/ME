@@ -4,6 +4,7 @@
   function setLang(l){root.setAttribute('data-lang',l);root.setAttribute('lang',l);
     btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false');});
     document.querySelectorAll('[data-ph-fr]').forEach(function(i){i.placeholder=i.getAttribute('data-ph-'+l);});
+    document.querySelectorAll('option[data-fr]').forEach(function(o){o.textContent=o.getAttribute('data-'+l);});
     try{localStorage.setItem('ms-lang',l);}catch(e){}}
   var saved=null;try{saved=localStorage.getItem('ms-lang');}catch(e){}
   setLang(saved==='en'?'en':'fr');

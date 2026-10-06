@@ -1,9 +1,6 @@
-# Publier un article sur le blog
+# Modifier les prix et les témoignages
 
 1. Va sur https://www.serroumohammed.com/admin/
-2. Connecte-toi (« Sign In with Token » la première fois, puis c'est mémorisé dans ton navigateur).
-3. Clique sur « Articles », puis « New Article ».
-4. Remplis le titre, la date, le résumé, puis écris ton article dans l'éditeur.
-5. Clique sur « Save ». L'article est en ligne une à deux minutes plus tard.
-
-Brouillon : coche « Brouillon » pour enregistrer sans publier.
+2. Connecte-toi (« Sign In with Token » la première fois).
+3. Ouvre « Prix et témoignages », puis la fiche voulue : Prix, Témoignages ou Cercle de mentorat.
+4. Modifie, puis clique sur « Save ». Le site est à jour une à deux minutes plus tard.

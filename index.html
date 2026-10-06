@@ -4,12 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#FFFFFF">
-<title>Mohammed Serrou — Contrôle de gestion, BI, formations et mentorat</title>
-<meta name="description" content="Contrôle de gestion pour PME, business intelligence, formations et mentorat. Des chiffres clairs pour piloter et décider.">
+<title>Mohammed Serrou · Contrôle de gestion, mentorat et pilotage freelance au Maroc</title>
+<meta name="description" content="Consultant en pilotage de la performance au Maroc : tableaux de bord pour PME, accompagnement des freelances, mentorat en finance et formations.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Mohammed Serrou — Contrôle de gestion, BI, formations et mentorat">
-<meta property="og:description" content="Contrôle de gestion pour PME, business intelligence, formations et mentorat. Des chiffres clairs pour piloter et décider.">
+<meta property="og:title" content="Mohammed Serrou · Contrôle de gestion, mentorat et pilotage freelance au Maroc">
+<meta property="og:description" content="Consultant en pilotage de la performance au Maroc : tableaux de bord pour PME, accompagnement des freelances, mentorat en finance et formations.">
 <meta property="og:url" content="https://www.serroumohammed.com/index.html">
 <meta property="og:image" content="https://www.serroumohammed.com/og-image.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -348,6 +348,30 @@ footer a:hover{color:var(--accent)}
 .proof2 .pd{margin:0;font-size:14px;line-height:1.5;color:var(--ink-2)}
 @media (max-width:700px){.proof2{grid-template-columns:1fr;gap:18px}}
 
+.fstats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;border-top:1px solid var(--line);padding-top:24px}
+.fstat .fn{font-family:var(--serif);font-size:34px;line-height:1.1;color:var(--accent);margin:0 0 8px}
+.fstat .fl{margin:0;color:var(--ink-2);font-size:15px}
+.fsrc{margin:28px 0 0;font-size:13px;color:var(--ink-2);max-width:60em}
+.fsrc a{color:var(--accent)}
+.fpbs{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 40px}
+.fpb{border-top:1px solid var(--line);padding-top:16px}
+.fpb .tn{font-family:var(--serif);font-size:28px;color:var(--accent);line-height:1}
+.fpb h3{font-size:21px;margin:8px 0 8px}
+.fpb p{margin:0;color:var(--ink-2);font-size:15px}
+.formats .incl{list-style:none;margin:0 0 22px;padding:0;font-size:14.5px}
+.formats .incl li{padding:5px 0 5px 18px;position:relative}
+.formats .incl li::before{content:"";position:absolute;left:0;top:14px;width:9px;height:1.5px;background:var(--accent)}
+.fnote{margin-top:32px;padding:18px 22px;background:var(--wash);border-left:3px solid var(--accent);color:var(--ink-2);font-size:15px}
+.fnote a{color:var(--accent)}
+@media (max-width:960px){.fstats{grid-template-columns:1fr 1fr}.fpbs{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.fstats,.fpbs{grid-template-columns:1fr}}
+
+.about .ah{font-size:28px;margin:0 0 14px}
+.yt{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.yt h2{margin-bottom:10px}.yt p{margin:0;color:var(--ink-2);max-width:40em}
+.contact h1{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.6vw,44px);line-height:1.1;color:#fff;margin:0;letter-spacing:-.015em}
+@media (max-width:700px){.wa{width:46px;height:46px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px))}.wa svg{width:24px;height:24px}main{padding-bottom:70px}}
+
 .menu-btn{display:none;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 14px var(--sans);padding:7px 12px;border-radius:6px;cursor:pointer}
 .menu-btn .bars{width:16px;height:10px;position:relative;display:inline-block;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor}
 .menu-btn .bars::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1.5px solid currentColor;transform:translateY(-50%)}
@@ -380,7 +404,7 @@ nav{gap:20px}
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">
   <a class="brand" href="index.html">Mohammed Serrou</a>
-  <nav id="mainnav" aria-label="Navigation principale"><a href="services.html" data-nav="services"><span lang="fr">Services</span><span lang="en">Services</span></a><a href="formations.html" data-nav="formations"><span lang="fr">Formations</span><span lang="en">Courses</span></a><a href="mentorat.html" data-nav="mentorat"><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></a><a href="freelances.html" data-nav="freelances"><span lang="fr">Freelances</span><span lang="en">Freelancers</span></a><a href="a-propos.html" data-nav="a-propos"><span lang="fr">À propos</span><span lang="en">About</span></a><a href="blog.html" data-nav="blog"><span lang="fr">Blog</span><span lang="en">Blog</span></a><a href="contact.html" data-nav="contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a></nav><button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="bars" aria-hidden="true"></span><span lang="fr">Menu</span><span lang="en">Menu</span></button>
+  <nav id="mainnav" aria-label="Navigation principale"><a href="services.html" data-nav="services"><span lang="fr">Services</span><span lang="en">Services</span></a><a href="formations.html" data-nav="formations"><span lang="fr">Formations</span><span lang="en">Courses</span></a><a href="mentorat.html" data-nav="mentorat"><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></a><a href="freelances.html" data-nav="freelances"><span lang="fr">Freelances</span><span lang="en">Freelancers</span></a><a href="a-propos.html" data-nav="a-propos"><span lang="fr">À propos</span><span lang="en">About</span></a><a href="contact.html" data-nav="contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a></nav><button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="bars" aria-hidden="true"></span><span lang="fr">Menu</span><span lang="en">Menu</span></button>
   <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr" aria-pressed="true">FR</button><button type="button" data-set="en" aria-pressed="false">EN</button></div>
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
 </div></header><main>
@@ -392,12 +416,12 @@ nav{gap:20px}
         <span lang="en">Clear numbers to steer your business.</span>
       </h1>
       <p class="lede">
-        <span lang="fr">J’aide les dirigeants de PME à mettre en place budget, tableaux de bord et reporting qui servent vraiment à décider. Et je forme celles et ceux qui veulent faire du contrôle de gestion leur métier.</span>
-        <span lang="en">I help small and mid-sized business owners set up budgets, dashboards and reporting that actually support decisions. I also train and mentor people who want to build a career in management control.</span>
+        <span lang="fr">J’aide les dirigeants de PME à piloter avec des tableaux de bord utiles, les freelances à savoir ce qu’ils gagnent vraiment, et les jeunes talents de la finance à réussir leur carrière.</span>
+        <span lang="en">I help SME owners steer with useful dashboards, freelancers know what they really earn, and young finance talent build their careers.</span>
       </p>
       <div class="ctas">
         <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
-        <a class="btn btn-ghost" href="formations.html"><span lang="fr">Voir les formations</span><span lang="en">See the courses</span></a>
+        <a class="btn btn-ghost" href="formations.html"><span lang="fr">Découvrir mes offres</span><span lang="en">Explore my offers</span></a>
       </div>
       <div class="proof2">
   <div><p class="pt"><span lang="fr">Consultant EPM</span><span lang="en">EPM consultant</span></p><p class="pd"><span lang="fr">Planification et reporting pour des directions financières</span><span lang="en">Planning and reporting for finance departments</span></p></div>
@@ -438,7 +462,7 @@ nav{gap:20px}
 </div>
 
 
-<section class="alt"><div class="wrap">
+<section class="alt" id="aide"><div class="wrap">
   <div class="head">
     <h2><span lang="fr">Comment je peux vous aider</span><span lang="en">How I can help</span></h2>
     <p><span lang="fr">Quatre portes d’entrée, selon votre situation.</span><span lang="en">Four ways in, depending on where you are.</span></p>
@@ -467,39 +491,11 @@ nav{gap:20px}
   </div>
 </div></section>
 
-<section id="methode" >
-  <div class="wrap">
-    <div class="head">
-      <h2><span lang="fr">Comment se passe une mission</span><span lang="en">How an engagement works</span></h2>
-      <p>
-        <span lang="fr">Un déroulé simple et transparent. L’objectif final : que vous soyez autonome.</span>
-        <span lang="en">A simple, transparent process. The end goal: you run it on your own.</span>
-      </p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <span class="n">1</span>
-        <h3><span lang="fr">Appel découverte</span><span lang="en">Discovery call</span></h3>
-        <p><span lang="fr">30 minutes offertes pour comprendre votre activité et vos priorités.</span><span lang="en">A free 30-minute call to understand your business and priorities.</span></p>
-      </div>
-      <div class="step">
-        <span class="n">2</span>
-        <h3><span lang="fr">Diagnostic</span><span lang="en">Diagnostic</span></h3>
-        <p><span lang="fr">J’analyse vos chiffres et vos outils, puis je vous propose un plan chiffré.</span><span lang="en">I review your numbers and tools, then send you a costed plan.</span></p>
-      </div>
-      <div class="step">
-        <span class="n">3</span>
-        <h3><span lang="fr">Mise en place</span><span lang="en">Implementation</span></h3>
-        <p><span lang="fr">Budget, tableaux de bord, procédures : on construit ensemble, étape par étape.</span><span lang="en">Budget, dashboards, procedures: we build them together, step by step.</span></p>
-      </div>
-      <div class="step">
-        <span class="n">4</span>
-        <h3><span lang="fr">Transmission</span><span lang="en">Handover</span></h3>
-        <p><span lang="fr">Je forme votre équipe pour que les outils vivent après mon départ.</span><span lang="en">I train your team so the tools keep running after I leave.</span></p>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="pourquoi"><div class="wrap">
+  <div class="head"><h2><span lang="fr">Pourquoi travailler avec moi</span><span lang="en">Why work with me</span></h2>
+    <p><span lang="fr">Quatre engagements, quel que soit votre besoin.</span><span lang="en">Four commitments, whatever your need.</span></p></div>
+  <div class="ways ways-4"><div class="way"><h3><span lang="fr">Un praticien, pas un théoricien</span><span lang="en">A practitioner, not a theorist</span></h3><p><span lang="fr">Je suis consultant en pilotage de la performance : je travaille chaque jour sur la planification et le reporting de directions financières.</span><span lang="en">I’m a performance management consultant: I work every day on planning and reporting for finance departments.</span></p></div><div class="way"><h3><span lang="fr">Des outils que vous gardez</span><span lang="en">Tools you keep</span></h3><p><span lang="fr">Tableaux de bord Excel, livrets, plans d’action : vous repartez avec des outils remplis avec vos chiffres, pas seulement des conseils.</span><span lang="en">Excel dashboards, handbooks, action plans: you leave with tools filled with your numbers, not just advice.</span></p></div><div class="way"><h3><span lang="fr">Une progression mesurée</span><span lang="en">Measured progress</span></h3><p><span lang="fr">Score de préparation pour le mentorat, indicateurs mensuels pour les freelances : on mesure le chemin parcouru.</span><span lang="en">Readiness score for mentoring, monthly indicators for freelancers: we measure the progress made.</span></p></div><div class="way"><h3><span lang="fr">Le contexte marocain</span><span lang="en">The Moroccan context</span></h3><p><span lang="fr">Statut d’auto-entrepreneur, CNSS, seuil des 80 000 DH, marché de l’emploi : je pars des règles et des réalités d’ici.</span><span lang="en">Self-employed status, CNSS, the 80,000 DH threshold, the job market: I start from local rules and realities.</span></p></div></div>
+</div></section>
 
 <!--TEMOIGNAGES:Accueil--><section class="band alt"><div class="wrap">
   <h2><span lang="fr">Un projet, une question ? Prenons 30 minutes.</span><span lang="en">A project or a question? Let’s take 30 minutes.</span></h2>

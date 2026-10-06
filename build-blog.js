@@ -67,7 +67,9 @@ const posts = fs.existsSync(ART) ? fs.readdirSync(ART).filter((f) => f.endsWith(
 posts.sort((a, b) => b.date.localeCompare(a.date));
 
 // 3. Générer une page par article, à partir du modèle de l'article existant
-const tpl = fs.readFileSync(path.join(ROOT, "article-indicateurs.html"), "utf8");
+const TPL = path.join(ROOT, "article-indicateurs.html");
+if (posts.length && fs.existsSync(TPL)) {
+const tpl = fs.readFileSync(TPL, "utf8");
 const a0 = tpl.indexOf('<article class="article">'), a1 = tpl.indexOf("</article>") + "</article>".length;
 const EXTRA_CSS = `<style>.article a{color:var(--accent)}.article blockquote{margin:28px 0;padding:18px 22px;background:var(--wash);border-left:3px solid var(--accent)}.article blockquote p{margin:0;font-size:18px}.article img{max-width:100%;height:auto;margin:20px 0}.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:16px}.article th,.article td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left}.article th{color:var(--accent)}.article h3{font-family:var(--serif);font-weight:400;font-size:22px;margin:30px 0 8px}</style>`;
 for (const p of posts) {
@@ -84,10 +86,13 @@ for (const p of posts) {
 
 // 4. Ajouter les articles en tête de la page Blog
 const blogFile = path.join(OUT, "blog.html");
+if (fs.existsSync(blogFile)) {
 let blog = fs.readFileSync(blogFile, "utf8");
 const cards = posts.map((p) => `<article class="post"><div class="meta">${frDate(p.date)} · ${p.minutes} min</div><h3><a href="article-${p.slug}.html" style="text-decoration:none">${esc(p.titre)}</a></h3><p>${esc(p.resume)}</p><a class="read" href="article-${p.slug}.html">Lire l’article</a></article>`).join("");
 blog = blog.replace('<div class="posts">', '<div class="posts">' + cards);
 fs.writeFileSync(blogFile, blog);
+}
+}
 
 // 5. Plan du site
 const smFile = path.join(OUT, "sitemap.xml");

@@ -4,12 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#FFFFFF">
-<title>Freelances | Mohammed Serrou</title>
-<meta name="description" content="Contrôle de gestion pour PME, business intelligence, formations et mentorat. Des chiffres clairs pour piloter et décider.">
+<title>Freelance et auto-entrepreneur au Maroc : impôt, CNSS, seuil de 80 000 DH | Mohammed Serrou</title>
+<meta name="description" content="Bilan et suivi mensuel pour freelances au Maroc : charges, impôt de 1 %, CNSS, seuil de 80 000 DH par client, trésorerie et tarif.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Freelances | Mohammed Serrou">
-<meta property="og:description" content="Contrôle de gestion pour PME, business intelligence, formations et mentorat. Des chiffres clairs pour piloter et décider.">
+<meta property="og:title" content="Freelance et auto-entrepreneur au Maroc : impôt, CNSS, seuil de 80 000 DH | Mohammed Serrou">
+<meta property="og:description" content="Bilan et suivi mensuel pour freelances au Maroc : charges, impôt de 1 %, CNSS, seuil de 80 000 DH par client, trésorerie et tarif.">
 <meta property="og:url" content="https://www.serroumohammed.com/freelances.html">
 <meta property="og:image" content="https://www.serroumohammed.com/og-image.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -348,6 +348,30 @@ footer a:hover{color:var(--accent)}
 .proof2 .pd{margin:0;font-size:14px;line-height:1.5;color:var(--ink-2)}
 @media (max-width:700px){.proof2{grid-template-columns:1fr;gap:18px}}
 
+.fstats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;border-top:1px solid var(--line);padding-top:24px}
+.fstat .fn{font-family:var(--serif);font-size:34px;line-height:1.1;color:var(--accent);margin:0 0 8px}
+.fstat .fl{margin:0;color:var(--ink-2);font-size:15px}
+.fsrc{margin:28px 0 0;font-size:13px;color:var(--ink-2);max-width:60em}
+.fsrc a{color:var(--accent)}
+.fpbs{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 40px}
+.fpb{border-top:1px solid var(--line);padding-top:16px}
+.fpb .tn{font-family:var(--serif);font-size:28px;color:var(--accent);line-height:1}
+.fpb h3{font-size:21px;margin:8px 0 8px}
+.fpb p{margin:0;color:var(--ink-2);font-size:15px}
+.formats .incl{list-style:none;margin:0 0 22px;padding:0;font-size:14.5px}
+.formats .incl li{padding:5px 0 5px 18px;position:relative}
+.formats .incl li::before{content:"";position:absolute;left:0;top:14px;width:9px;height:1.5px;background:var(--accent)}
+.fnote{margin-top:32px;padding:18px 22px;background:var(--wash);border-left:3px solid var(--accent);color:var(--ink-2);font-size:15px}
+.fnote a{color:var(--accent)}
+@media (max-width:960px){.fstats{grid-template-columns:1fr 1fr}.fpbs{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.fstats,.fpbs{grid-template-columns:1fr}}
+
+.about .ah{font-size:28px;margin:0 0 14px}
+.yt{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.yt h2{margin-bottom:10px}.yt p{margin:0;color:var(--ink-2);max-width:40em}
+.contact h1{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.6vw,44px);line-height:1.1;color:#fff;margin:0;letter-spacing:-.015em}
+@media (max-width:700px){.wa{width:46px;height:46px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px))}.wa svg{width:24px;height:24px}main{padding-bottom:70px}}
+
 .menu-btn{display:none;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 14px var(--sans);padding:7px 12px;border-radius:6px;cursor:pointer}
 .menu-btn .bars{width:16px;height:10px;position:relative;display:inline-block;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor}
 .menu-btn .bars::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1.5px solid currentColor;transform:translateY(-50%)}
@@ -380,53 +404,63 @@ nav{gap:20px}
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">
   <a class="brand" href="index.html">Mohammed Serrou</a>
-  <nav id="mainnav" aria-label="Navigation principale"><a href="services.html" data-nav="services"><span lang="fr">Services</span><span lang="en">Services</span></a><a href="formations.html" data-nav="formations"><span lang="fr">Formations</span><span lang="en">Courses</span></a><a href="mentorat.html" data-nav="mentorat"><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></a><a href="freelances.html" aria-current="page" data-nav="freelances"><span lang="fr">Freelances</span><span lang="en">Freelancers</span></a><a href="a-propos.html" data-nav="a-propos"><span lang="fr">À propos</span><span lang="en">About</span></a><a href="blog.html" data-nav="blog"><span lang="fr">Blog</span><span lang="en">Blog</span></a><a href="contact.html" data-nav="contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a></nav><button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="bars" aria-hidden="true"></span><span lang="fr">Menu</span><span lang="en">Menu</span></button>
+  <nav id="mainnav" aria-label="Navigation principale"><a href="services.html" data-nav="services"><span lang="fr">Services</span><span lang="en">Services</span></a><a href="formations.html" data-nav="formations"><span lang="fr">Formations</span><span lang="en">Courses</span></a><a href="mentorat.html" data-nav="mentorat"><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></a><a href="freelances.html" aria-current="page" data-nav="freelances"><span lang="fr">Freelances</span><span lang="en">Freelancers</span></a><a href="a-propos.html" data-nav="a-propos"><span lang="fr">À propos</span><span lang="en">About</span></a><a href="contact.html" data-nav="contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a></nav><button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="bars" aria-hidden="true"></span><span lang="fr">Menu</span><span lang="en">Menu</span></button>
   <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr" aria-pressed="true">FR</button><button type="button" data-set="en" aria-pressed="false">EN</button></div>
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
 </div></header><main><div class="page-head"><div class="wrap">
-  <h1><span lang="fr">Pilotage financier pour freelances</span><span lang="en">Financial steering for freelancers</span></h1>
-  <p class="lede"><span lang="fr">Vous facturez, mais vous ne savez jamais vraiment combien vous gagnez ? Je vous aide à voir clair dans vos charges, vos abonnements et ce qu’il faut mettre de côté pour les impôts et les cotisations.</span><span lang="en">You invoice, but never really know how much you earn? I help you see clearly through your costs, subscriptions and what to set aside for taxes and social contributions.</span></p>
+  <h1><span lang="fr">Freelances au Maroc : pilotez vos chiffres, sans mauvaise surprise</span><span lang="en">Freelancers in Morocco: steer your numbers, with no nasty surprises</span></h1>
+  <p class="lede"><span lang="fr">Impôt, CNSS, seuil des 80 000 DH, clients à l’étranger, trésorerie : je vous aide à savoir ce que vous gagnez vraiment et combien mettre de côté, chaque mois.</span><span lang="en">Tax, CNSS, the 80,000 DH threshold, clients abroad, cash: I help you know what you really earn and how much to set aside, every month.</span></p>
+  <div class="ctas" style="margin-top:28px"><a class="btn btn-solid" data-booking="bilan-freelance" href="contact.html"><span lang="fr">Réserver un bilan</span><span lang="en">Book a check-up</span></a><a class="btn btn-ghost" href="#offre"><span lang="fr">Voir l’offre et les prix</span><span lang="en">See the offer and prices</span></a></div>
 </div></div>
+<section class="alt"><div class="wrap">
+  <div class="head"><h2><span lang="fr">Les chiffres à connaître</span><span lang="en">Key figures</span></h2>
+    <p><span lang="fr">Les règles en vigueur en 2026 pour les auto-entrepreneurs en prestation de services.</span><span lang="en">The 2026 rules for self-employed service providers.</span></p></div>
+  <div class="fstats"><div class="fstat"><p class="fn">463 383</p><p class="fl"><span lang="fr">auto-entrepreneurs inscrits au Maroc fin 2025</span><span lang="en">registered self-employed in Morocco at end-2025</span></p></div><div class="fstat"><p class="fn">< 17 %</p><p class="fl"><span lang="fr">déclarent réellement leur chiffre d’affaires chaque trimestre</span><span lang="en">actually declare their revenue each quarter</span></p></div><div class="fstat"><p class="fn">80 000 DH</p><p class="fl"><span lang="fr">par client et par an : au-delà, 30 % retenus à la source</span><span lang="en">per client per year: above it, 30% withheld at source</span></p></div><div class="fstat"><p class="fn">300 à 3 600 DH</p><p class="fl"><span lang="fr">de CNSS par trimestre, même sans chiffre d’affaires</span><span lang="en">CNSS per quarter, even with zero revenue</span></p></div></div>
+  <p class="fsrc"><span lang="fr">Sources : rapport d’activité 2025 de la DGI, loi 114-13 et lois de finances 2023 à 2026, barème CNSS des auto-entrepreneurs. Plafond annuel : 200 000 DH pour les services, impôt de 1 % du chiffre d’affaires encaissé. Vérifiez chaque année sur </span><span lang="en">Sources: DGI 2025 activity report, law 114-13 and finance laws 2023 to 2026, CNSS self-employed scale. Annual cap: 200,000 DH for services, tax of 1% of revenue collected. Check every year on </span><a href="https://www.ae.gov.ma" target="_blank" rel="noopener">ae.gov.ma</a>, <a href="https://www.tax.gov.ma" target="_blank" rel="noopener">tax.gov.ma</a>, <a href="https://www.cnss.ma" target="_blank" rel="noopener">cnss.ma</a>.</p>
+</div></section>
 <section><div class="wrap">
-  <div class="head"><h2><span lang="fr">Ce que l’on regarde ensemble</span><span lang="en">What we look at together</span></h2>
-    <p><span lang="fr">Pour les freelances au Maroc : auto-entrepreneurs, SARL AU, et ceux qui travaillent pour des clients à l’étranger.</span><span lang="en">For freelancers in Morocco: self-employed status, single-member companies, and those working for clients abroad.</span></p></div>
-  <ul class="who">
-    <li><strong><span lang="fr">Charges et abonnements</span><span lang="en">Costs and subscriptions</span></strong>
-      <span class="d"><span lang="fr">Logiciels, outils, assurances, téléphone, coworking : on liste tout ce qui sort chaque mois, on repère les doublons et on décide quoi garder.</span><span lang="en">Software, tools, insurance, phone, coworking: we list every monthly outflow, spot duplicates and decide what to keep.</span></span></li>
-    <li><strong><span lang="fr">Impôts et cotisations à provisionner</span><span lang="en">Taxes and contributions to set aside</span></strong>
-      <span class="d"><span lang="fr">Impôt de l’auto-entrepreneur, CNSS, seuil des 80 000 DH par client : on estime ce que vous devez mettre de côté chaque mois, pour ne plus être surpris au moment de payer.</span><span lang="en">Self-employed tax, CNSS, the 80,000 DH per-client threshold: we estimate what to set aside each month, so payment deadlines no longer catch you off guard.</span></span></li>
-    <li><strong><span lang="fr">Votre vrai revenu</span><span lang="en">Your real income</span></strong>
-      <span class="d"><span lang="fr">Ce qu’il vous reste réellement après charges, impôts, cotisations et jours non facturés.</span><span lang="en">What you actually keep after costs, taxes, contributions and unbilled days.</span></span></li>
-    <li><strong><span lang="fr">Votre TJM</span><span lang="en">Your day rate</span></strong>
-      <span class="d"><span lang="fr">Un tarif calculé à partir de vos chiffres réels et de votre objectif de revenu, pas estimé au hasard.</span><span lang="en">A rate calculated from your real numbers and income goal, not guessed.</span></span></li>
-    <li><strong><span lang="fr">Votre trésorerie</span><span lang="en">Your cash</span></strong>
-      <span class="d"><span lang="fr">Une prévision sur 3 à 6 mois et un coussin de sécurité pour traverser les périodes sans mission.</span><span lang="en">A 3-to-6-month forecast and a safety cushion for periods between contracts.</span></span></li>
-  </ul>
+  <div class="head"><h2><span lang="fr">Les 6 problèmes des freelances</span><span lang="en">The 6 freelancer problems</span></h2>
+    <p><span lang="fr">Ceux que je rencontre le plus souvent, et que l’on règle ensemble.</span><span lang="en">The ones I see most often, and that we solve together.</span></p></div>
+  <div class="fpbs"><div class="fpb"><span class="tn">1</span><h3><span lang="fr">Le piège du client unique</span><span lang="en">The single-client trap</span></h3><p><span lang="fr">Au-delà de 80 000 DH facturés à une même entreprise dans l’année, la part qui dépasse est taxée à 30 %, retenus par le client, au lieu de 1 %. Avec un gros client, la facture fiscale peut être multipliée par dix.</span><span lang="en">Above 80,000 DH billed to the same company in a year, the excess is taxed at 30%, withheld by the client, instead of 1%. With one big client, your tax bill can be multiplied by ten.</span></p></div><div class="fpb"><span class="tn">2</span><h3><span lang="fr">L’impôt et la CNSS non provisionnés</span><span lang="en">Unplanned tax and CNSS</span></h3><p><span lang="fr">La déclaration est trimestrielle, et la CNSS se paie par tranches, de 300 à 3 600 DH par trimestre, même quand on n’a rien facturé. Sans réserve mise de côté, chaque échéance devient un stress.</span><span lang="en">Declarations are quarterly, and CNSS is paid by bracket, from 300 to 3,600 DH per quarter, even with nothing invoiced. Without money set aside, every deadline becomes stressful.</span></p></div><div class="fpb"><span class="tn">3</span><h3><span lang="fr">Les déclarations oubliées</span><span lang="en">Missed declarations</span></h3><p><span lang="fr">Il faut déclarer chaque trimestre, même à zéro. Les auto-entrepreneurs inactifs sont désormais repérés, avec à la clé des radiations et la perte de la couverture maladie.</span><span lang="en">You must declare every quarter, even at zero. Inactive self-employed people are now being identified, with deregistration and loss of health cover at stake.</span></p></div><div class="fpb"><span class="tn">4</span><h3><span lang="fr">Les retards de paiement</span><span lang="en">Late payments</span></h3><p><span lang="fr">Entre entreprises, la loi fixe le paiement à 60 jours après la facture, 120 jours au maximum si c’est écrit. Encore faut-il préciser l’échéance sur vos devis et vos factures, et relancer.</span><span lang="en">Between companies, the law sets payment at 60 days after invoice, 120 days maximum if agreed in writing. You still need to state the due date on quotes and invoices, and follow up.</span></p></div><div class="fpb"><span class="tn">5</span><h3><span lang="fr">Les clients à l’étranger</span><span lang="en">Clients abroad</span></h3><p><span lang="fr">Les recettes de vos prestations à l’export doivent être rapatriées au Maroc par une banque marocaine. Laisser durablement l’argent sur une plateforme étrangère expose à des sanctions.</span><span lang="en">Revenue from services sold abroad must be brought back to Morocco through a Moroccan bank. Leaving money on a foreign platform for long exposes you to penalties.</span></p></div><div class="fpb"><span class="tn">6</span><h3><span lang="fr">Un tarif trop bas et des revenus irréguliers</span><span lang="en">Rates too low and irregular income</span></h3><p><span lang="fr">La plupart des freelances fixent leur prix au feeling, sans compter les jours non facturés ni les charges. Résultat : des mois tendus dès qu’une mission s’arrête.</span><span lang="en">Most freelancers set their price by gut feeling, ignoring unbilled days and costs. The result: tight months as soon as a contract ends.</span></p></div></div>
 </div></section>
 <section class="alt"><div class="wrap">
+  <div class="head"><h2><span lang="fr">La méthode en 4 étapes</span><span lang="en">The 4-step method</span></h2>
+    <p><span lang="fr">Voir clair, provisionner, sécuriser, puis piloter chaque mois.</span><span lang="en">See clearly, set aside, secure, then steer every month.</span></p></div>
+  <img class="tmap" src="freelance-etapes.png" width="1200" height="184" alt="Les 4 étapes : voir clair, provisionner, sécuriser, piloter">
+</div></section>
+<section id="offre"><div class="wrap">
   <div class="head"><h2><span lang="fr">Deux formats</span><span lang="en">Two formats</span></h2>
     <p><span lang="fr">Prix de lancement.</span><span lang="en">Launch prices.</span></p></div>
   <div class="formats">
     <article class="course">
       <div class="tag"><span lang="fr">Ponctuel</span><span lang="en">One-off</span></div>
       <h3><span lang="fr">Bilan freelance</span><span lang="en">Freelance check-up</span></h3><p class="price"><i class="v" data-cms="prix.bilan_freelance">600 DH</i><span lang="fr"> / bilan</span><span lang="en"> / check-up</span></p>
-      <p><span lang="fr">Une séance d’1h30 en visio pour passer en revue vos charges, vos abonnements et vos provisions. Vous repartez avec un tableau de suivi Excel personnalisé.</span><span lang="en">A 90-minute video session reviewing your costs, subscriptions and provisions. You leave with a personalised Excel tracker.</span></p>
+      <p><span lang="fr">1h30 en visio sur vos vrais chiffres : charges et abonnements, seuil par client, plafond, provisions et trésorerie.</span><span lang="en">90 minutes by video on your real numbers: costs and subscriptions, per-client threshold, cap, provisions and cash.</span></p>
+      <ul class="incl">
+        <li><span lang="fr">Questionnaire de préparation</span><span lang="en">Preparation questionnaire</span></li>
+        <li><span lang="fr">Votre tableau de bord Excel, rempli avec vos chiffres</span><span lang="en">Your Excel dashboard, filled with your numbers</span></li>
+        <li><span lang="fr">Compte rendu écrit et plan d’action sous 48 heures</span><span lang="en">Written report and action plan within 48 hours</span></li>
+      </ul>
       <a class="btn btn-solid" data-booking="bilan-freelance" href="contact.html"><span lang="fr">Réserver un bilan</span><span lang="en">Book a check-up</span></a>
     </article>
     <article class="course">
       <div class="tag"><span lang="fr">Suivi</span><span lang="en">Ongoing</span></div>
       <h3><span lang="fr">Suivi mensuel</span><span lang="en">Monthly follow-up</span></h3><p class="price"><i class="v" data-cms="prix.suivi_mensuel">300 DH</i><span lang="fr"> / mois</span><span lang="en"> / month</span></p>
-      <p><span lang="fr">Un point de 45 minutes chaque mois : mise à jour du tableau, montant à provisionner, alertes sur la trésorerie et les échéances.</span><span lang="en">A 45-minute monthly check-in: tracker update, amount to set aside, alerts on cash and deadlines.</span></p>
+      <p><span lang="fr">45 minutes chaque mois pour garder le cap : encaissements, provisions, seuils et échéances.</span><span lang="en">45 minutes each month to stay on course: income, provisions, thresholds and deadlines.</span></p>
+      <ul class="incl">
+        <li><span lang="fr">Mise à jour de votre tableau de bord</span><span lang="en">Dashboard update</span></li>
+        <li><span lang="fr">Alertes sur le seuil client, le plafond et la trésorerie</span><span lang="en">Alerts on client threshold, cap and cash</span></li>
+        <li><span lang="fr">Fiche de suivi et décisions du mois</span><span lang="en">Monthly tracking sheet and decisions</span></li>
+      </ul>
       <a class="btn btn-ghost" href="contact.html"><span lang="fr">Demander le suivi</span><span lang="en">Request follow-up</span></a>
     </article>
   </div>
+  <div class="fnote"><span lang="fr">Je ne remplace pas votre comptable : je ne tiens pas votre comptabilité et je ne fais pas vos déclarations. Je vous aide à piloter et à anticiper. Vous voulez d’abord fixer votre tarif seul ? Voyez la formation </span><span lang="en">I don’t replace your accountant: I don’t keep your books or file your returns. I help you steer and plan ahead. Want to set your rate on your own first? See the course </span><a href="formation-calcul-tjm.html"><span lang="fr">Calculer son TJM, pas l’estimer</span><span lang="en">Calculate your day rate, don’t guess it</span></a>.</div>
 </div></section>
-<section><div class="wrap">
-  <div class="article" style="padding:0;margin:0">
-    <div class="box"><p><span lang="fr">Je ne remplace pas votre expert-comptable : je ne tiens pas votre comptabilité et je ne fais pas vos déclarations. Je vous aide à piloter et à anticiper, et je travaille volontiers en lien avec votre comptable.</span><span lang="en">I don’t replace your accountant: I don’t keep your books or file your returns. I help you steer and plan ahead, and I’m happy to work alongside your accountant.</span></p></div>
-    <p style="font-family:var(--sans);font-size:17px;color:var(--ink-2)"><span lang="fr">Vous voulez d’abord apprendre à fixer votre tarif seul ? Découvrez la formation <a href="formations.html">Calculer son TJM, pas l’estimer</a>.</span><span lang="en">Want to learn to set your rate on your own first? See the course <a href="formations.html">Calculate your day rate, don’t guess it</a>.</span></p>
-  </div>
-</div></section><!--TEMOIGNAGES:Freelances--><section class="band alt"><div class="wrap">
+<section class="alt"><div class="wrap">
+  <div class="head"><h2><span lang="fr">Questions fréquentes</span><span lang="en">Frequently asked questions</span></h2><p></p></div>
+  <div class="faq"><details><summary><span lang="fr">Dois-je déclarer même sans chiffre d’affaires ?</span><span lang="en">Must I declare even with zero revenue?</span></summary><p><span lang="fr">Oui. La déclaration est trimestrielle, même à zéro, et la cotisation CNSS minimale reste due. Ne pas déclarer peut mener à la radiation.</span><span lang="en">Yes. Declarations are quarterly, even at zero, and the minimum CNSS contribution is still due. Not declaring can lead to deregistration.</span></p></details><details><summary><span lang="fr">Comment est calculée ma CNSS ?</span><span lang="en">How is my CNSS calculated?</span></summary><p><span lang="fr">Elle ne dépend pas directement de votre chiffre d’affaires : votre impôt du trimestre vous classe dans l’une des 8 tranches, de 300 à 3 600 DH par trimestre.</span><span lang="en">It doesn’t depend directly on revenue: your quarterly tax places you in one of 8 brackets, from 300 to 3,600 DH per quarter.</span></p></details><details><summary><span lang="fr">La règle des 80 000 DH s’applique-t-elle à tous mes clients ?</span><span lang="en">Does the 80,000 DH rule apply to all my clients?</span></summary><p><span lang="fr">Elle se calcule client par client et année par année, pour les prestations de services facturées à des entreprises. On la vérifie ensemble sur votre liste de clients.</span><span lang="en">It is assessed client by client and year by year, for services billed to companies. We check it together against your client list.</span></p></details><details><summary><span lang="fr">Faites-vous ma comptabilité ou mes déclarations ?</span><span lang="en">Do you do my accounting or returns?</span></summary><p><span lang="fr">Non. Je vous aide à piloter et à anticiper. Pour les déclarations, la comptabilité ou un changement de statut, un comptable reste indispensable, et je travaille volontiers avec le vôtre.</span><span lang="en">No. I help you steer and plan ahead. For returns, accounting or a change of status, an accountant remains essential, and I’m happy to work with yours.</span></p></details></div>
+</div></section><!--TEMOIGNAGES:Freelances--><section class="band"><div class="wrap">
   <h2><span lang="fr">Un projet, une question ? Prenons 30 minutes.</span><span lang="en">A project or a question? Let’s take 30 minutes.</span></h2>
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
 </div></section></main><footer><div class="wrap">
