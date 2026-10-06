@@ -320,6 +320,19 @@ footer a:hover{color:var(--accent)}
 @media (max-width:960px){.tsteps{grid-template-columns:1fr 1fr}.tscore{grid-template-columns:1fr}}
 @media (max-width:600px){.tsteps{grid-template-columns:1fr}}
 
+.mduo{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.mduo h2{margin-bottom:22px}
+.mlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.mlist li{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.mlist strong{font-family:var(--serif);font-weight:400;font-size:19px}
+.mlist span{color:var(--ink-2);font-size:15px;text-align:right}
+.mscore{text-align:center}
+.mscore .radar{max-width:300px}
+.mscore p{color:var(--ink-2);font-size:15px;margin:8px auto 0;max-width:24em}
+.mwho{color:var(--ink-2);margin:0 0 16px;max-width:34em}
+.mlink{color:var(--accent);font-weight:500;font-size:15px}
+@media (max-width:860px){.mduo{grid-template-columns:1fr;gap:40px}.mlist li{flex-direction:column;gap:2px}.mlist span{text-align:left}}
+
 .aside .aprice{font-family:var(--serif);font-size:40px;line-height:1.1;color:var(--accent);margin:0}
 .aside .aprice span{display:block;font-family:var(--sans);font-size:14px;color:var(--ink-2);margin-top:4px}
 .aside .anote{font-size:13px;color:var(--ink-2);margin:6px 0 18px;padding-bottom:16px;border-bottom:1px solid var(--line)}
@@ -353,6 +366,16 @@ nav{gap:20px}
   .menu-btn{display:inline-flex}
   .bar{gap:12px}
 }
+
+.v{font-style:normal}
+.course .price{font-family:var(--serif);font-size:30px;line-height:1.1;color:var(--accent);margin:2px 0 12px}
+.course .price span{font-family:var(--sans);font-size:14px;color:var(--ink-2)}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tcard{margin:0;border-top:2px solid var(--accent);padding-top:20px}
+.tcard blockquote{margin:0 0 16px;font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink)}
+.tcard figcaption strong{display:block;font-size:15px}
+.tcard figcaption span{font-size:14px;color:var(--ink-2)}
+@media (max-width:860px){.tgrid{grid-template-columns:1fr}}
 </style><script src="config.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">

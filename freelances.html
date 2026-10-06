@@ -320,6 +320,19 @@ footer a:hover{color:var(--accent)}
 @media (max-width:960px){.tsteps{grid-template-columns:1fr 1fr}.tscore{grid-template-columns:1fr}}
 @media (max-width:600px){.tsteps{grid-template-columns:1fr}}
 
+.mduo{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.mduo h2{margin-bottom:22px}
+.mlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.mlist li{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.mlist strong{font-family:var(--serif);font-weight:400;font-size:19px}
+.mlist span{color:var(--ink-2);font-size:15px;text-align:right}
+.mscore{text-align:center}
+.mscore .radar{max-width:300px}
+.mscore p{color:var(--ink-2);font-size:15px;margin:8px auto 0;max-width:24em}
+.mwho{color:var(--ink-2);margin:0 0 16px;max-width:34em}
+.mlink{color:var(--accent);font-weight:500;font-size:15px}
+@media (max-width:860px){.mduo{grid-template-columns:1fr;gap:40px}.mlist li{flex-direction:column;gap:2px}.mlist span{text-align:left}}
+
 .aside .aprice{font-family:var(--serif);font-size:40px;line-height:1.1;color:var(--accent);margin:0}
 .aside .aprice span{display:block;font-family:var(--sans);font-size:14px;color:var(--ink-2);margin-top:4px}
 .aside .anote{font-size:13px;color:var(--ink-2);margin:6px 0 18px;padding-bottom:16px;border-bottom:1px solid var(--line)}
@@ -353,6 +366,16 @@ nav{gap:20px}
   .menu-btn{display:inline-flex}
   .bar{gap:12px}
 }
+
+.v{font-style:normal}
+.course .price{font-family:var(--serif);font-size:30px;line-height:1.1;color:var(--accent);margin:2px 0 12px}
+.course .price span{font-family:var(--sans);font-size:14px;color:var(--ink-2)}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tcard{margin:0;border-top:2px solid var(--accent);padding-top:20px}
+.tcard blockquote{margin:0 0 16px;font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink)}
+.tcard figcaption strong{display:block;font-size:15px}
+.tcard figcaption span{font-size:14px;color:var(--ink-2)}
+@media (max-width:860px){.tgrid{grid-template-columns:1fr}}
 </style><script src="config.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">
@@ -382,17 +405,17 @@ nav{gap:20px}
 </div></section>
 <section class="alt"><div class="wrap">
   <div class="head"><h2><span lang="fr">Deux formats</span><span lang="en">Two formats</span></h2>
-    <p><span lang="fr">Tarifs communiqués sur demande.</span><span lang="en">Rates available on request.</span></p></div>
+    <p><span lang="fr">Prix de lancement.</span><span lang="en">Launch prices.</span></p></div>
   <div class="formats">
     <article class="course">
       <div class="tag"><span lang="fr">Ponctuel</span><span lang="en">One-off</span></div>
-      <h3><span lang="fr">Bilan freelance</span><span lang="en">Freelance check-up</span></h3>
+      <h3><span lang="fr">Bilan freelance</span><span lang="en">Freelance check-up</span></h3><p class="price"><i class="v" data-cms="prix.bilan_freelance">600 DH</i><span lang="fr"> / bilan</span><span lang="en"> / check-up</span></p>
       <p><span lang="fr">Une séance d’1h30 en visio pour passer en revue vos charges, vos abonnements et vos provisions. Vous repartez avec un tableau de suivi Excel personnalisé.</span><span lang="en">A 90-minute video session reviewing your costs, subscriptions and provisions. You leave with a personalised Excel tracker.</span></p>
       <a class="btn btn-solid" data-booking="bilan-freelance" href="contact.html"><span lang="fr">Réserver un bilan</span><span lang="en">Book a check-up</span></a>
     </article>
     <article class="course">
       <div class="tag"><span lang="fr">Suivi</span><span lang="en">Ongoing</span></div>
-      <h3><span lang="fr">Suivi mensuel</span><span lang="en">Monthly follow-up</span></h3>
+      <h3><span lang="fr">Suivi mensuel</span><span lang="en">Monthly follow-up</span></h3><p class="price"><i class="v" data-cms="prix.suivi_mensuel">300 DH</i><span lang="fr"> / mois</span><span lang="en"> / month</span></p>
       <p><span lang="fr">Un point de 45 minutes chaque mois : mise à jour du tableau, montant à provisionner, alertes sur la trésorerie et les échéances.</span><span lang="en">A 45-minute monthly check-in: tracker update, amount to set aside, alerts on cash and deadlines.</span></p>
       <a class="btn btn-ghost" href="contact.html"><span lang="fr">Demander le suivi</span><span lang="en">Request follow-up</span></a>
     </article>
@@ -403,7 +426,7 @@ nav{gap:20px}
     <div class="box"><p><span lang="fr">Je ne remplace pas votre expert-comptable : je ne tiens pas votre comptabilité et je ne fais pas vos déclarations. Je vous aide à piloter et à anticiper, et je travaille volontiers en lien avec votre comptable.</span><span lang="en">I don’t replace your accountant: I don’t keep your books or file your returns. I help you steer and plan ahead, and I’m happy to work alongside your accountant.</span></p></div>
     <p style="font-family:var(--sans);font-size:17px;color:var(--ink-2)"><span lang="fr">Vous voulez d’abord apprendre à fixer votre tarif seul ? Découvrez la formation <a href="formations.html">Calculer son TJM, pas l’estimer</a>.</span><span lang="en">Want to learn to set your rate on your own first? See the course <a href="formations.html">Calculate your day rate, don’t guess it</a>.</span></p>
   </div>
-</div></section><section class="band alt"><div class="wrap">
+</div></section><!--TEMOIGNAGES:Freelances--><section class="band alt"><div class="wrap">
   <h2><span lang="fr">Un projet, une question ? Prenons 30 minutes.</span><span lang="en">A project or a question? Let’s take 30 minutes.</span></h2>
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
 </div></section></main><footer><div class="wrap">

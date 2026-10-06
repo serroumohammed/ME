@@ -320,6 +320,19 @@ footer a:hover{color:var(--accent)}
 @media (max-width:960px){.tsteps{grid-template-columns:1fr 1fr}.tscore{grid-template-columns:1fr}}
 @media (max-width:600px){.tsteps{grid-template-columns:1fr}}
 
+.mduo{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.mduo h2{margin-bottom:22px}
+.mlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.mlist li{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.mlist strong{font-family:var(--serif);font-weight:400;font-size:19px}
+.mlist span{color:var(--ink-2);font-size:15px;text-align:right}
+.mscore{text-align:center}
+.mscore .radar{max-width:300px}
+.mscore p{color:var(--ink-2);font-size:15px;margin:8px auto 0;max-width:24em}
+.mwho{color:var(--ink-2);margin:0 0 16px;max-width:34em}
+.mlink{color:var(--accent);font-weight:500;font-size:15px}
+@media (max-width:860px){.mduo{grid-template-columns:1fr;gap:40px}.mlist li{flex-direction:column;gap:2px}.mlist span{text-align:left}}
+
 .aside .aprice{font-family:var(--serif);font-size:40px;line-height:1.1;color:var(--accent);margin:0}
 .aside .aprice span{display:block;font-family:var(--sans);font-size:14px;color:var(--ink-2);margin-top:4px}
 .aside .anote{font-size:13px;color:var(--ink-2);margin:6px 0 18px;padding-bottom:16px;border-bottom:1px solid var(--line)}
@@ -353,6 +366,16 @@ nav{gap:20px}
   .menu-btn{display:inline-flex}
   .bar{gap:12px}
 }
+
+.v{font-style:normal}
+.course .price{font-family:var(--serif);font-size:30px;line-height:1.1;color:var(--accent);margin:2px 0 12px}
+.course .price span{font-family:var(--sans);font-size:14px;color:var(--ink-2)}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tcard{margin:0;border-top:2px solid var(--accent);padding-top:20px}
+.tcard blockquote{margin:0 0 16px;font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink)}
+.tcard figcaption strong{display:block;font-size:15px}
+.tcard figcaption span{font-size:14px;color:var(--ink-2)}
+@media (max-width:860px){.tgrid{grid-template-columns:1fr}}
 </style><script src="config.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">
@@ -378,10 +401,10 @@ nav{gap:20px}
     <ul class="outcomes"><li><span lang="fr">Une cible claire et des documents relus</span><span lang="en">A clear target and reviewed documents</span></li><li><span lang="fr">Une méthode de candidature</span><span lang="en">An application method</span></li><li><span lang="fr">De l’entraînement aux entretiens</span><span lang="en">Interview practice</span></li><li><span lang="fr">Un réseau de personnes qui avancent comme vous</span><span lang="en">A network of people progressing like you</span></li></ul>
   </div>
   <aside class="aside">
-    <p class="aprice">600 DH<span><span lang="fr"> / personne</span><span lang="en"> / person</span></span></p>
+    <p class="aprice"><i class="v" data-cms="prix.cercle">600 DH</i><span><span lang="fr"> / personne</span><span lang="en"> / person</span></span></p>
     <p class="anote"><span lang="fr">Prix de lancement</span><span lang="en">Launch price</span></p>
     <dl><dt><span lang="fr">Durée</span><span lang="en">Length</span></dt><dd><span lang="fr">2 mois</span><span lang="en">2 months</span></dd><dt><span lang="fr">Séances</span><span lang="en">Sessions</span></dt><dd><span lang="fr">4 × 1h30 en visio</span><span lang="en">4 × 90 min by video</span></dd><dt><span lang="fr">Groupe</span><span lang="en">Group</span></dt><dd><span lang="fr">4 à 6 personnes</span><span lang="en">4 to 6 people</span></dd></dl>
-    <form class="wl" data-course="Cercle de mentorat" novalidate><input type="text" name="_gotcha" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="sr">Email</label><input type="email" name="email" autocomplete="email" required data-ph-fr="Votre email" data-ph-en="Your email" placeholder="Votre email"><button class="btn btn-solid" type="submit"><span lang="fr">Rejoindre le prochain groupe</span><span lang="en">Join the next group</span></button><p class="wl-msg" aria-live="polite"></p></form>
+    <p class="anote2" data-cms="cercle.prochain_groupe">Le prochain groupe démarre dès 4 inscrits.</p><form class="wl" data-course="Cercle de mentorat" novalidate><input type="text" name="_gotcha" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="sr">Email</label><input type="email" name="email" autocomplete="email" required data-ph-fr="Votre email" data-ph-en="Your email" placeholder="Votre email"><button class="btn btn-solid" type="submit"><span lang="fr">Rejoindre le prochain groupe</span><span lang="en">Join the next group</span></button><p class="wl-msg" aria-live="polite"></p></form>
   </aside>
 </div></section>
 <section class="alt"><div class="wrap">

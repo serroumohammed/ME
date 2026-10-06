@@ -8,7 +8,7 @@ const yaml = require("js-yaml");
 const ROOT = __dirname;
 const OUT = path.join(ROOT, "public");
 const ART = path.join(ROOT, "articles");
-const SKIP = new Set(["public", "node_modules", "articles", ".git", ".github", ".vercel", "package.json", "package-lock.json", "build-blog.js", "vercel.json", "COMMENT-PUBLIER.md"]);
+const SKIP = new Set(["public", "node_modules", "articles", ".git", ".github", ".vercel", "data", "package.json", "package-lock.json", "build-blog.js", "vercel.json", "COMMENT-PUBLIER.md"]);
 const SITE = "https://www.serroumohammed.com";
 const MOIS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
 
@@ -39,6 +39,28 @@ function parse(file) {
 fs.rmSync(OUT, { recursive: true, force: true }); fs.mkdirSync(OUT);
 for (const f of fs.readdirSync(ROOT)) if (!SKIP.has(f) && !f.startsWith(".")) copy(path.join(ROOT, f), path.join(OUT, f));
 if (fs.existsSync(path.join(ART, "images"))) copy(path.join(ART, "images"), path.join(OUT, "images"));
+
+// 1b. Contenus éditables : prix, témoignages, prochain cercle (dossier « data »)
+const DATA = path.join(ROOT, "data");
+const loadY = (f) => { const p = path.join(DATA, f); return fs.existsSync(p) ? (yaml.load(fs.readFileSync(p, "utf8"), { schema: yaml.CORE_SCHEMA }) || {}) : {}; };
+const prix = loadY("prix.yml"), cercle = loadY("cercle.yml"), tem = (loadY("temoignages.yml").temoignages || []).filter((t) => t && t.publie !== false && t.texte);
+const fmtDH = (n) => String(Math.round(Number(n))).replace(/\B(?=(\d{3})+(?!\d))/g, "\u00a0") + "\u00a0DH";
+const values = {};
+for (const [k, v] of Object.entries(prix)) if (v !== null && v !== "" && !isNaN(Number(v))) values["prix." + k] = fmtDH(v);
+for (const [k, v] of Object.entries(cercle)) if (v) values["cercle." + k] = esc(v);
+function temSection(page) {
+  const list = tem.filter((t) => !t.pages || (Array.isArray(t.pages) ? t.pages : [t.pages]).includes(page));
+  if (!list.length) return "";
+  const cards = list.map((t) => `<figure class="tcard"><blockquote>« ${esc(t.texte)} »</blockquote><figcaption><strong>${esc(t.prenom || "")}</strong><span>${esc([t.situation, t.programme].filter(Boolean).join(" · "))}</span></figcaption></figure>`).join("");
+  return `<section><div class="wrap"><div class="head"><h2><span lang="fr">Ils en parlent</span><span lang="en">What they say</span></h2><p></p></div><div class="tgrid">${cards}</div></div></section>`;
+}
+for (const f of fs.readdirSync(OUT).filter((f) => f.endsWith(".html"))) {
+  const p = path.join(OUT, f); let h = fs.readFileSync(p, "utf8"); const before = h;
+  h = h.replace(/(<([a-z0-9]+)[^>]*\sdata-cms="([a-z0-9_.]+)"[^>]*>)([\s\S]*?)(<\/\2>)/g, (m, open, tag, key, inner, close) => (key in values ? open + values[key] + close : m));
+  h = h.replace(/<!--TEMOIGNAGES:([A-Za-zé]+)-->/g, (m, page) => temSection(page));
+  if (h !== before) fs.writeFileSync(p, h);
+}
+console.log(`Contenus : ${Object.keys(values).length} valeur(s), ${tem.length} témoignage(s).`);
 
 // 2. Lire les articles
 const posts = fs.existsSync(ART) ? fs.readdirSync(ART).filter((f) => f.endsWith(".md")).map((f) => parse(path.join(ART, f))).filter((p) => !p.brouillon) : [];
