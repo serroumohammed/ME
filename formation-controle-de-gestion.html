@@ -7,6 +7,9 @@
 <title>Formation contrôle de gestion : les fondamentaux | Mohammed Serrou</title>
 <meta name="description" content="Coûts, budget, écarts, trésorerie et tableau de bord : les fondamentaux du contrôle de gestion, sur le cas d'une PME marocaine.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:site_name" content="serrou.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Formation contrôle de gestion : les fondamentaux | Mohammed Serrou">
 <meta property="og:description" content="Coûts, budget, écarts, trésorerie et tableau de bord : les fondamentaux du contrôle de gestion, sur le cas d'une PME marocaine.">
@@ -45,7 +48,9 @@ html[data-lang="en"] [lang="fr"]:not(html){display:none!important}
 /* header */
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:28px;height:68px}
-.brand{font-family:var(--serif);font-size:21px;text-decoration:none;letter-spacing:-.01em;margin-right:auto}
+.brand{display:flex;align-items:center;margin-right:auto;text-decoration:none}
+.brand img{display:block;height:27px;width:auto}
+.brand-sm{height:19px;width:auto;vertical-align:-3px;margin-right:12px}
 nav{display:flex;gap:24px}
 nav a{text-decoration:none;font-size:15px;color:var(--ink-2)}
 nav a:hover{color:var(--ink)}
@@ -377,7 +382,7 @@ footer a:hover{color:var(--accent)}
 .menu-btn .bars::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1.5px solid currentColor;transform:translateY(-50%)}
 .brand,nav a,.bar .btn{white-space:nowrap}
 nav{gap:20px}
-@media (max-width:420px){.brand{font-size:18px}}
+@media (max-width:420px){.brand img{height:23px}}
 .wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:56px;height:56px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(122,31,61,.28);text-decoration:none}
 .wa:hover{background:var(--accent-d)}
 .wa svg{width:28px;height:28px}
@@ -403,7 +408,7 @@ nav{gap:20px}
 </style><script src="config.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">
-  <a class="brand" href="index.html">Mohammed Serrou</a>
+  <a class="brand" href="index.html" aria-label="Mohammed Serrou, accueil"><img src="logo-serrou.svg" alt="serrou." width="140" height="29"></a>
   <nav id="mainnav" aria-label="Navigation principale"><a href="services.html" data-nav="services"><span lang="fr">Services</span><span lang="en">Services</span></a><a href="formations.html" aria-current="page" data-nav="formations"><span lang="fr">Formations</span><span lang="en">Courses</span></a><a href="mentorat.html" data-nav="mentorat"><span lang="fr">Mentorat</span><span lang="en">Mentoring</span></a><a href="freelances.html" data-nav="freelances"><span lang="fr">Freelances</span><span lang="en">Freelancers</span></a><a href="a-propos.html" data-nav="a-propos"><span lang="fr">À propos</span><span lang="en">About</span></a><a href="contact.html" data-nav="contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a></nav><button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="bars" aria-hidden="true"></span><span lang="fr">Menu</span><span lang="en">Menu</span></button>
   <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr" aria-pressed="true">FR</button><button type="button" data-set="en" aria-pressed="false">EN</button></div>
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
@@ -443,7 +448,7 @@ nav{gap:20px}
   <h2><span lang="fr">Un projet, une question ? Prenons 30 minutes.</span><span lang="en">A project or a question? Let’s take 30 minutes.</span></h2>
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
 </div></section></main><footer><div class="wrap">
-  <span>© 2026 Mohammed Serrou</span>
+  <span><img class="brand-sm" src="logo-serrou.svg" alt="serrou." width="92" height="19">© 2026 Mohammed Serrou</span>
   <span class="links">
     <a data-social="linkedin" hidden target="_blank" rel="noopener">LinkedIn</a>
     <a data-social="youtube" hidden target="_blank" rel="noopener">YouTube</a>
