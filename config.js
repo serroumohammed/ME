@@ -10,6 +10,10 @@ window.SITE_CONFIG = {
   // Lien Formspree pour recevoir les formulaires par email (ex : "https://formspree.io/f/abcdwxyz")
   formEndpoint: "https://formspree.io/f/xljdqkgd",
 
+  // Newsletter Kit : colle ici l'identifiant de ton formulaire Kit (les chiffres, ex : "1234567").
+  // Tant que c'est vide, les inscriptions arrivent par email via Formspree.
+  kitFormId: "10232710",
+
   // Réseaux sociaux (ex : "https://www.linkedin.com/in/ton-profil")
   linkedin: "https://www.linkedin.com/in/serrou-mohammed",
   youtube: "https://www.youtube.com/@serrou_mohammed",

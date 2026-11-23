@@ -405,6 +405,39 @@ nav{gap:20px}
 .tcard figcaption strong{display:block;font-size:15px}
 .tcard figcaption span{font-size:14px;color:var(--ink-2)}
 @media (max-width:860px){.tgrid{grid-template-columns:1fr}}
+/* mise en page du texte */
+h2,h3{text-wrap:balance}
+p,li,dd{text-wrap:pretty}
+.head{display:block;max-width:46rem;margin-bottom:48px}
+.head h2{margin:0}
+.head p{margin:14px 0 0;font-size:18px;line-height:1.6;max-width:40em}
+.way{display:flex;flex-direction:column}
+.way p{flex:0 0 auto}
+.way .more{margin-top:auto;align-self:flex-start;padding-top:4px}
+.facts span:last-child{color:var(--ink)}
+.mlist strong{font-family:var(--sans);font-weight:500;font-size:15.5px;color:var(--ink)}
+.mlist span{font-size:15px}
+.page-head + section.alt{padding-top:88px}
+.page-head:has(+ section.alt){padding-bottom:72px}
+@media (min-width:1101px){.mgrid .mcard h3{min-height:2.4em}}
+@media (min-width:961px){
+  .ways .way,.fpbs .fpb{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0;align-content:start}
+  .ways .way .more{margin-top:0;align-self:start}
+}
+@media (min-width:701px) and (max-width:1100px){.ways-4 .way{grid-row:auto;display:flex}}
+/* newsletter */
+.nl{padding:72px 0}
+.nl-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;border-top:2px solid var(--ink);padding-top:36px}
+.nl .kick{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+.nl h2{margin:0 0 12px}
+.nl p.d{margin:0;color:var(--ink-2);max-width:32em}
+.nlf{display:flex;gap:10px;flex-wrap:wrap}
+.nlf input[type=email]{flex:1 1 220px;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.nlf input[type=email]:focus{outline:2px solid var(--accent);outline-offset:1px}
+.nlf .btn{flex:0 0 auto}
+.nlf .nl-msg{flex-basis:100%;margin:4px 0 0;font-size:14px;color:var(--ink-2);min-height:1.4em}
+.nlf .nl-legal{flex-basis:100%;margin:0;font-size:12.5px;color:var(--ink-2)}
+@media (max-width:820px){.nl-in{grid-template-columns:1fr;gap:24px}}
 </style><script src="config.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body><header><div class="wrap bar">
@@ -414,14 +447,14 @@ nav{gap:20px}
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel</span><span lang="en">Book a call</span></a>
 </div></header><main><div class="page-head"><div class="wrap">
   <h1><span lang="fr">Formations</span><span lang="en">Courses</span></h1>
-  <p class="lede"><span lang="fr">Des formations concrètes, construites à partir de cas réels. Les inscriptions ouvrent bientôt : laissez votre adresse pour être prévenu en premier.</span><span lang="en">Practical courses built from real cases. Enrolment opens soon: leave your email to be the first to know.</span></p>
+  <p class="lede"><span lang="fr">Des formations concrètes, construites à partir de cas réels. Les inscriptions ouvrent bientôt : laissez votre adresse pour être prévenu en premier.</span><span lang="en">Practical courses built from real cases. Enrolment opens soon: leave your email to be the first to know.</span></p>
 </div></div>
 <section id="formations">
   <div class="wrap">
     <div class="courses">
       <article class="course">
         <div class="tag"><span lang="fr">Pour débuter</span><span lang="en">Beginner</span></div>
-        <h3><a href="formation-controle-de-gestion.html" style="text-decoration:none"><span lang="fr">Contrôle de gestion : les fondamentaux</span><span lang="en">Management control fundamentals</span></a></h3>
+        <h3><a href="formation-controle-de-gestion.html" style="text-decoration:none"><span lang="fr">Contrôle de gestion : les fondamentaux</span><span lang="en">Management control fundamentals</span></a></h3>
         <p><span lang="fr">Comprendre les coûts, construire un budget, analyser les écarts et monter un premier tableau de bord.</span><span lang="en">Understand costs, build a budget, analyse variances and create your first dashboard.</span></p>
         <dl>
           <dt><span lang="fr">Public</span><span lang="en">For</span></dt><dd><span lang="fr">Étudiants, dirigeants, profils non financiers</span><span lang="en">Students, owners, non-finance profiles</span></dd>
@@ -492,7 +525,7 @@ nav{gap:20px}
 </section>
 
 <section class="band alt"><div class="wrap">
-  <h2><span lang="fr">Un projet, une question ? Prenons 30 minutes.</span><span lang="en">A project or a question? Let’s take 30 minutes.</span></h2>
+  <h2><span lang="fr">Un projet, une question ? Prenons 30 minutes.</span><span lang="en">A project or a question? Let’s take 30 minutes.</span></h2>
   <a class="btn btn-solid" href="contact.html" data-booking="appel-decouverte"><span lang="fr">Réserver un appel découverte</span><span lang="en">Book a discovery call</span></a>
 </div></section></main><footer><div class="wrap">
   <span><img class="brand-sm" src="logo-serrou.svg" alt="serrou." width="92" height="19">© 2026 Mohammed Serrou</span>
@@ -501,6 +534,7 @@ nav{gap:20px}
     <a data-social="youtube" hidden target="_blank" rel="noopener">YouTube</a>
     <a data-social="instagram" hidden target="_blank" rel="noopener">Instagram</a>
     <a data-social="tiktok" hidden target="_blank" rel="noopener">TikTok</a>
+    <a href="newsletter.html">Newsletter</a>
     <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
   </span>
 </div></footer><a class="wa" href="https://wa.me/212609216678?text=Bonjour%20Mohammed%2C%20je%20viens%20de%20votre%20site." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 4.8 4.9-1.3A9.8 9.8 0 1 0 12 2.2zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.4z"/></svg></a><script src="site.js"></script></body></html>

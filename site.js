@@ -35,6 +35,26 @@
         function(){msg.textContent=isEn()?'Sending failed. Write to contact@serroumohammed.com.':'L’envoi a échoué. Écrivez à contact@serroumohammed.com.';},f);
     });
   });
+  // newsletter forms (Kit si kitFormId est rempli, sinon Formspree)
+  document.querySelectorAll('form.nlf').forEach(function(f){
+    var msg=f.querySelector('.nl-msg'), inp=f.querySelector('input[type=email]'), btn=f.querySelector('button');
+    function ok(){f.reset();btn.disabled=false;msg.textContent=isEn()?'Thank you. Check your inbox to confirm your subscription.':'Merci ! Vérifiez votre boîte mail pour confirmer votre inscription.';}
+    function ko(){btn.disabled=false;msg.textContent=isEn()?'Sending failed. Write to contact@serroumohammed.com.':'L’envoi a échoué. Écrivez à contact@serroumohammed.com.';}
+    function viaFormspree(email){
+      if(!C.formEndpoint){window.location.href='mailto:contact@serroumohammed.com?subject='+encodeURIComponent('Inscription newsletter')+'&body='+encodeURIComponent('Email : '+email);return;}
+      send({type:'Newsletter',source:f.dataset.src||'',email:email},function(){f.reset();btn.disabled=false;msg.textContent=isEn()?'Thank you, you’re on the list.':'Merci, c’est noté : vous recevrez le prochain numéro.';},ko,f);
+    }
+    f.addEventListener('submit',function(e){e.preventDefault();
+      if(!inp.value.trim()||!inp.checkValidity()){msg.textContent=isEn()?'Enter a valid email address.':'Saisissez une adresse email valide.';inp.focus();return;}
+      var hp=f.querySelector('[name=_gotcha]');if(hp&&hp.value){ok();return;}
+      var email=inp.value.trim();btn.disabled=true;msg.textContent=isEn()?'Sending…':'Envoi…';
+      if(C.kitFormId){
+        var body=new FormData();body.append('email_address',email);
+        fetch('https://app.kit.com/forms/'+encodeURIComponent(C.kitFormId)+'/subscriptions',{method:'POST',headers:{'Accept':'application/json'},body:body})
+          .then(function(r){r.ok?ok():viaFormspree(email);}).catch(function(){viaFormspree(email);});
+      } else viaFormspree(email);
+    });
+  });
   // contact form
   var f=document.getElementById('contactForm');
   if(f){var hint=document.getElementById('formHint'), sub=f.querySelector('button[type=submit]');
